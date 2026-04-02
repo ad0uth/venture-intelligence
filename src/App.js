@@ -549,7 +549,7 @@ export default function App() {
         {/* Header */}
         <div style={{ marginBottom: 36 }}>
           <div style={{ fontSize: 10, fontWeight: 600, color: "#9ca3af", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
-            Venture Intelligence · Somnia Portfolio Review
+            Venture Intelligence
           </div>
           <h1 style={{ fontSize: 30, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.2 }}>
             Top 3 Ventures — Deep Dive
@@ -577,10 +577,6 @@ export default function App() {
           ))}
         </div>
 
-        {/* Footer note */}
-        <div style={{ padding: "14px 18px", background: "#fff", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12, color: "#6b7280", lineHeight: 1.6 }}>
-          <strong style={{ color: "#374151" }}>Note on Kash:</strong> Removed from shortlist due to structural platform dependency risk — distribution model depends entirely on X/TikTok APIs the company doesn't control, compounded by regulatory enforcement risk and the threat of platforms replicating the feature natively. The three remaining ventures all own their infrastructure stack.
-        </div>
       </div>
     </div>
   );
