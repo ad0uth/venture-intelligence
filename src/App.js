@@ -267,7 +267,7 @@ function ChatView({ venture: v }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           system: v.systemPrompt,
-          messages: next.map(m => ({ role: m.role, content: m.content }))
+          messages: next.slice(1).map(m => ({ role: m.role, content: m.content }))
         })
       });
       const data = await res.json();
