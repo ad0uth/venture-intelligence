@@ -26,6 +26,10 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+    if (!response.ok) {
+      console.error("Anthropic error:", JSON.stringify(data));
+      return res.status(200).json({ content: `API error: ${data.error?.message || JSON.stringify(data)}` });
+    }
     const text = data.content?.find(b => b.type === "text")?.text || "No response.";
     res.status(200).json({ content: text });
   } catch (error) {
