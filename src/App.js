@@ -24,28 +24,64 @@ const VENTURES = {
     ],
     scores: { "Traction": [16,25], "Market": [16,20], "Biz model": [19,20], "Team": [13,15], "Somnia": [6,10], "Upside": [8,10] },
     highlights: [
-      { icon: "⚡", title: "Machine Truth oracle", desc: "Deterministic resolution from authoritative data (EPEX Spot, EIA) — not social consensus. No conflicts of interest." },
-      { icon: "💧", title: "3-phase liquidity plan", desc: "0% fees + MM rebates → own capital deployment → professional MMs. The only deck in this portfolio with an actual answer to the bootstrapping problem." },
+      { icon: "⚡", title: "Machine Truth oracle", desc: "Deterministic resolution from authoritative data (EPEX Spot, EIA) — not social consensus. No conflicts of interest. Dispute-free by design." },
+      { icon: "💧", title: "3-phase liquidity plan", desc: "0% fees + MM rebates → own capital deployment → professional MMs. The only deck in this portfolio with a real answer to the bootstrapping problem." },
       { icon: "🏗️", title: "Platform independent", desc: "Owns entire stack — oracle, CLOB, smart contracts. Zero API dependency risk. No platform can pull the plug." },
-      { icon: "💰", title: "Triple revenue model", desc: "0.3% taker fee + 1% settlement fee on winnings + 35% float yield retention. Three proven streams, all aligned with user behaviour." },
+      { icon: "💰", title: "Triple revenue model", desc: "0.3% taker fee + 1% settlement fee on winnings + 35% float yield retention. Three proven, aligned streams." },
     ],
     risks: [
-      "Energy market distribution is hard — commodity traders are conservative, non-crypto-native buyers",
-      "Only $100K in founder bootstrap capital — thin for a product requiring liquidity seeding",
-      "Oracle data infrastructure risk if EPEX Spot or EIA data is delayed or revised",
-      "April 28 launch is imminent — smart contract audit status unconfirmed"
+      "Energy market distribution is hard — commodity traders are conservative, non-crypto-native buyers. Lorenzo's crypto-native GTM playbook may not translate cleanly.",
+      "Only $100K in founder bootstrap capital — thin for a product requiring significant liquidity seeding. Even with $3M raised, ~$1M available for liquidity.",
+      "Oracle data infrastructure risk — if EPEX Spot or EIA data is delayed, revised, or access is disrupted, market resolution integrity is compromised.",
+      "April 28 2026 product launch is imminent — smart contract audit status unconfirmed in deck. Audit is non-negotiable for a financial product.",
+      "Built on Solana — Solana has had multiple network outages historically. A hybrid stack mitigates but doesn't eliminate infrastructure dependency.",
     ],
     team: [
-      { name: "Gianluigi", role: "Tech Co-Founder", bg: "2nd-time fintech founder. Ex-N26 Tech Lead. Ex-CTO Klar." },
-      { name: "Lorenzo F. Villa", role: "Biz Co-Founder", bg: "Crypto since 2016. Coinbase consulting. Law graduate. Bocconi Fintech Lab." },
+      { name: "Gianluigi", role: "Tech Co-Founder", bg: "2nd-time fintech founder with 10+ years across Europe & LatAm. Ex-N26 Tech Lead (top European neobank). Ex-CTO Klar (Mexican fintech). Brings serious regulated fintech infrastructure experience." },
+      { name: "Lorenzo F. Villa", role: "Biz Co-Founder", bg: "Crypto power user since 2016. Led crypto consultancy including Coinbase. Bocconi Fintech Lab. Law graduate — directly relevant for the regulatory navigation this product requires." },
     ],
     advisors: [
-      "Daniele Titotto — Portfolio Manager, Axpo Group (energy)",
-      "Alex D'Elia — CEO Prosume Energy (grid)",
-      "Andrea La Mendola — ex-COO Hyperloop",
-      "[Redacted] MD — major energy firm"
+      "⚡ Daniele Titotto — Portfolio Manager, Axpo Group (one of Europe's largest energy traders)",
+      "🔌 Alex D'Elia — CEO Prosume Energy (grid infrastructure)",
+      "🚄 Andrea La Mendola — Ex-COO Hyperloop (operations & management)",
+      "🌐 Gabriele Cavargna Bontosi — Web3 Entrepreneur (partnerships)",
+      "🏭 [Redacted] Managing Director — Major energy firm",
     ],
-    somnia: "MEDIUM-HIGH — Cross-chain compatibility is on roadmap. High-frequency energy contract settlement (5-min TTF updates) generates constant on-chain events well-suited to Somnia's architecture. EVM-compatible deployment feasible without full rewrite.",
+    teamNote: "Team also includes 3 developers and 2 designers.",
+    report: [
+      {
+        label: "The core thesis",
+        body: "Inframarkets is making a bet distinct from every other prediction market in this group: instead of competing for social bettors or crypto traders, they're targeting a $1T+ annual energy futures market where volatility is surging and risk management tools are expensive and gated. The AI and electrification supercycle is making grid volatility a mainstream economic phenomenon — European TTF gas prices swinging 60%+ intraday, renewable intermittency creating constant price spikes. Inframarkets provides event contracts (up/down on European TTF gas in 5 minutes, WTI-Brent spread at close tomorrow) that let anyone trade this volatility with no minimum contract size, 24/7, settled on-chain via authoritative data. This is not a social bet or a crypto wager — it's a missing financial primitive for the real economy."
+      },
+      {
+        label: "What makes this genuinely different",
+        body: "The differentiation vs Polymarket is structural, not cosmetic. Polymarket uses 'social truth' — markets resolve based on what reporters and voters say happened. This creates conflicts of interest, is slow, and is inappropriate for financial instruments. Inframarkets uses 'Machine Truth' — their IOS (Inframarkets Oracle System) resolves markets deterministically from authoritative data sources like EPEX Spot and EIA reports. This is the correct architecture for institutional-grade products. The hybrid stack (off-chain CLOB for order matching, on-chain settlement) gives trading-desk speed with blockchain settlement finality. The live product demo shows 22 markets and $67.6K total volume — modest but real and verifiable."
+      },
+      {
+        label: "Revenue model — clearest of the three",
+        body: "Three streams, all clean and proven: 0.3% taker fee on trading volume (competitive with crypto derivatives norms), 1% settlement fee on realised winnings (outcome-based, only paid on winning positions — aligns incentives well), and ~35% retention of yield generated on locked capital (idle USDC in open positions earns stablecoin APY, Inframarkets keeps 35%). This third stream is particularly elegant — it monetises float without charging users directly, similar to how traditional brokerages earn on cash balances. No other deck in this group has revenue mechanics this clearly thought through."
+      },
+      {
+        label: "The liquidity plan — the most important differentiator",
+        body: "This is what separates Inframarkets from Tide most sharply. Tide's deck is completely silent on the liquidity bootstrapping problem. Inframarkets has a three-phase plan: Phase 0 (3–12 months post-launch): 0% taker/maker fees, -0.1% rebates for market makers up to $10M/month volume, points programme. Phase 1: deploy own capital to guarantee order execution plus dedicated MMs for specific markets. Phase 2: transition to professional MMs only across all markets. This is a coherent, battle-tested approach used by every successful derivatives exchange. The fact that they've thought through the chicken-and-egg problem and have a capital allocation strategy for it — even with $3M seed — is a meaningful signal of operational maturity."
+      },
+      {
+        label: "Key diligence questions",
+        body: "1. What is the smart contract audit status and who is auditing? With an April 28 launch date this is the most time-sensitive question. 2. Are there any institutional trading desk conversations already underway — even informal — that validate the energy sector demand? 3. How exactly does Lorenzo's GTM reach commodity traders who aren't already crypto-native? The personas listed (crypto traders, commodity traders, macro traders, gamblers) span very different acquisition channels. 4. What data provider agreements are formally in place with EPEX Spot and EIA? 5. What is the granular breakdown of how the ~$1M available for liquidity (35% of $3M) will be deployed across which markets in the first six months?"
+      },
+    ],
+    reportVerdict: {
+      value: "Strong invest case",
+      sub: "Most rigorous pitch in the portfolio. Real problem, technically credible solution, clean revenue model, actual liquidity plan, best sector-credentialed advisory team. The risk/reward is compelling at $3M seed / $15M post. Gate: audit status, data provider agreements, evidence of institutional demand conversations."
+    },
+    somnia: "Cross-chain compatibility is already on Inframarkets' post-launch roadmap, suggesting they're chain-agnostic by design. High-frequency energy contract settlement — intraday TTF gas contracts update every 5 minutes, generating constant on-chain position tracking, margin calls and settlement events. Somnia's EVM-compatible architecture means an Inframarkets deployment wouldn't require a full rewrite of oracle or settlement logic. Slightly lower fit than Tide/OnePlayr because institutional traders are less sensitive to gas costs than retail consumers — but a meaningful integration opportunity, particularly as Inframarkets expands to retail participation.",
+    somniaLabel: "Medium-High",
+    somniaPoints: [
+      "1M+ TPS handles continuous 5-minute energy market settlement events without bottleneck",
+      "Sub-cent transactions make micro-position retail trading economically viable",
+      "EVM-compatible — existing Solidity contracts deployable without full rewrite",
+      "Cross-chain migration aligns with their existing roadmap milestone",
+    ],
     systemPrompt: `You are a senior venture analyst. Deep dive complete on Inframarkets — institutional-grade energy prediction markets.
 
 KEY FACTS: $3M seed, $15M post-money. 22 live markets, $67.6K volume. Product launch Apr 28 2026. Built on Solana with hybrid stack (off-chain CLOB + on-chain settlement). IOS oracle: deterministic resolution from EPEX Spot, EIA reports — "machine truth." Revenue: 0.3% taker fee + 1% settlement fee on winnings + ~35% float yield retention. Liquidity plan — RARE DETAIL: Phase 0 (0% fees, -0.1% MM rebates, points), Phase 1 (own capital + dedicated MMs), Phase 2 (professional MMs only). Team: Gianluigi (ex-N26 Tech Lead, ex-CTO Klar, 2nd-time fintech founder), Lorenzo Villa (crypto 2016+, Coinbase consulting, law graduate). Advisors: Daniele Titotto (Portfolio Manager Axpo Group), Alex D'Elia (CEO Prosume Energy), redacted MD energy firm. Market: $1T+ energy futures/yr US+Europe, $78B EPEX Spot 2025 (+38% 2yr). Key structural advantage: owns entire stack, no platform dependency. Analyst verdict: Strong invest case.
@@ -65,38 +101,74 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
     score: 65,
     verdict: "WATCH CLOSELY",
     tagline: "Make Precision Pay.",
-    description: "Scalar/continuum prediction markets — bet on the number, not just yes or no. More +EV surface per event, better odds for traders, more revenue per market.",
+    description: "Scalar/continuum prediction markets — bet on the number, not just yes or no. Binary markets force two outcomes; Tide creates 50 tradeable positions per event, each with its own mispricing opportunity.",
     metrics: [
       { label: "SAM", value: "$155B on-chain" },
       { label: "TAM", value: "$1.5T" },
+      { label: "SOM", value: "$1.56B" },
       { label: "Launch", value: "Q2 2026" },
-      { label: "Prior raised", value: "~$20M" },
       { label: "Polymarket comp", value: "$1B → $8B+" },
       { label: "Kalshi comp", value: "$2B → $11B" },
     ],
     scores: { "Traction": [9,25], "Market": [15,20], "Biz model": [16,20], "Team": [11,15], "Somnia": [9,10], "Upside": [5,10] },
     highlights: [
-      { icon: "📐", title: "Scalar vs binary insight", desc: "Binary markets force yes/no. Scalar markets let you bet on a number, range, or magnitude — creating 50 tradeable positions where binary creates 2." },
-      { icon: "🔒", title: "Platform independent", desc: "Standalone protocol. No API dependency on X, TikTok or any social platform. Owns its infrastructure end to end." },
+      { icon: "📐", title: "Scalar vs binary insight", desc: "Binary markets force yes/no. Scalar markets let you bet on a number, range, or magnitude — creating 50 tradeable positions where binary creates 2. More +EV shots per event." },
+      { icon: "🔒", title: "Platform independent", desc: "Standalone protocol. No API dependency on X, TikTok or any social platform. Owns its infrastructure end to end. Why Kash was dropped and Tide wasn't." },
       { icon: "⚡", title: "Strongest Somnia fit", desc: "Scalar markets generate more on-chain ops per event than any other prediction format. Economically broken on high-gas chains. Somnia's architecture is required at retail scale." },
-      { icon: "📈", title: "Extraordinary comp momentum", desc: "Polymarket: $1B to $8B+ in months. Kalshi: $2B to $11B. Prediction markets are repricing faster than almost any sector in finance." },
+      { icon: "📈", title: "Extraordinary comp momentum", desc: "Polymarket: $1B to $8B+ in months. Kalshi: $2B to $11B. Prediction markets are repricing faster than almost any sector in finance right now." },
     ],
     risks: [
-      "No liquidity bootstrapping plan in deck — the most critical unresolved question",
-      "Same 3-person team as Kash (dropped venture) — bandwidth risk",
-      "Pre-launch, pre-revenue — no market traction to anchor conviction",
-      "Scalar oracle needs to resolve exact numbers — more complex dispute resolution than binary"
+      "No liquidity bootstrapping plan disclosed — the most critical unresolved question. Scalar markets are harder to bootstrap than binary ones, requiring counterparties at every point on the curve.",
+      "Same 3-person core team building multiple products simultaneously — real bandwidth risk for a technically complex product.",
+      "Pre-launch, pre-revenue — no live market traction to anchor conviction. Comparable momentum is compelling but not a substitute for product validation.",
+      "Scalar oracle complexity — resolving a precise number (not a binary) requires more complex dispute resolution architecture that isn't detailed in the deck.",
+      "Polymarket could add scalar markets as a feature. What is the durable moat if the category leader copies the instrument?",
     ],
     team: [
-      { name: "Jo Lim", role: "Product Lead", bg: "DeFi native. Designed products raising $10M+. HL KBW 2025 winner." },
-      { name: "Othniel Naga", role: "CTO", bg: "Founder/CTO VTF & TONCASH. Full-stack Web3, risk/infra. HL KBW 2025." },
-      { name: "Joshua Ong", role: "Narrative & Community", bg: "SNS ambassador. HL KBW 2025 winner." },
+      { name: "Jo Lim", role: "Product Lead", bg: "DeFi native → operator. Designed DeFi & AI products that raised $10M+. HL KBW 2025 winner." },
+      { name: "Othniel Naga", role: "CTO", bg: "Founder/CTO of VTF & TONCASH. Full-stack Web3, risk/infra specialist. HL KBW 2025 winner." },
+      { name: "Joshua Ong", role: "Narrative & Community", bg: "Narrative research & community operator. SNS ambassador. HL KBW 2025 winner." },
     ],
     advisors: [
+      "Previous ventures raised ~$20M from DeFiance Capital, 500 Startups, Merit Circle, Ton Ventures, Blockchain Founders Fund, LVT Capital",
       "Supported by talent from PwC, Mastercard, Citi, Accenture",
-      "Previous ventures backed by DeFiance Capital, 500 Startups, Merit Circle, Ton Ventures"
+      "Multi-hackathon winners: ETHGlobal SG 2024, ETHTaipei 2024, ETHKL 2023 & 2024, ETHBogota 2023, ETHGlobal Istanbul 2023, Hyperliquid 2025",
     ],
-    somnia: "VERY HIGH — Scalar markets require constant position updates at every point on the curve. On high-gas chains this is economically broken. Somnia's 1M+ TPS, sub-cent transactions make Tide's continuum model viable at retail scale. Strongest Somnia fit of all ventures reviewed.",
+    report: [
+      {
+        label: "The core thesis",
+        body: "Every prediction market today forces a binary choice: yes or no, up or down, will or won't. Tide's argument is that this flattens most of the edge in the world. If you believe Bitcoin will land between $85K and $95K in December — not just 'up' or 'down' — you have no clean way to express that view. Binary markets collapse probability distributions into two buckets; scalar markets let you bet on a number, a range, a duration, a magnitude. The result is more +EV shots per event: a Bitcoin price market on Tide might have 50 distinct positions rather than 2, each with its own mispricing opportunity. This isn't a minor product tweak — it's a fundamentally different financial instrument."
+      },
+      {
+        label: "The comparable momentum case",
+        body: "Tide's deck makes smart use of comparables. Polymarket went from a $200M raise at $1B valuation in June 2025 to reports of $12–15B talks by October — a 10-15x move in months. Kalshi went from $2B valuation in June to $11B by November. These are some of the fastest valuation re-ratings in recent financial history, and they validate the prediction market category beyond any reasonable doubt. Tide is pitching at seed stage in a sector repricing at extraordinary velocity. Even a small slice of the SAM ($155B on-chain) generates significant revenue at 0.3–1% take rate."
+      },
+      {
+        label: "The liquidity bootstrapping gap — critical flaw",
+        body: "This is where Tide materially underperforms Inframarkets. Inframarkets has a three-phase liquidity plan. Tide's deck is completely silent on the same problem. Scalar markets are harder to bootstrap than binary ones: instead of finding two counterparties, you need counterparties at every point on a continuous curve. A Bitcoin price market with 50 possible outcomes needs liquidity at all 50 points simultaneously for the product to work. Polymarket spent years and significant capital seeding binary markets before they became self-sustaining. Tide needs to solve a harder version of the same problem with no disclosed plan for doing so. This is the single most important thing to pressure-test before investing."
+      },
+      {
+        label: "Platform independence — a key structural advantage",
+        body: "Unlike Kash (which was dropped from this shortlist), Tide doesn't depend on any social platform's API policy. This is more significant than it sounds. X has restricted financial bots before. TikTok has shut down creator monetisation tools without notice. Kash's entire distribution model lived and died on platform permission. Tide is a standalone protocol — permissionless, self-hosted, owned infrastructure. This structural independence is a real moat that compounds over time as regulatory pressure on financial activities within social platforms increases."
+      },
+      {
+        label: "Key diligence questions",
+        body: "1. What is the actual liquidity bootstrapping plan — is there a market-making arrangement, a liquidity fund, or own capital commitment? This is the most important unanswered question. 2. Given the same team is building both Tide and another product simultaneously, what's the resource allocation split? 3. What's the oracle architecture for scalar resolution — how are disputes handled when authoritative data is unavailable? 4. What is the smart contract audit status and timeline? 5. How does Tide defend its scalar instrument if Polymarket adds scalar markets as a feature?"
+      },
+    ],
+    reportVerdict: {
+      value: "Watch closely",
+      sub: "Most intellectually compelling product of the three. Strongest Somnia fit. Genuine structural independence. The gap from Inframarkets in conviction terms is almost entirely one thing: Tide needs to present a credible liquidity plan. If they can — even a rough Phase 0 equivalent of Inframarkets' plan — the verdict moves to Strong Invest."
+    },
+    somnia: "Tide has the strongest Somnia fit of all three ventures. Scalar markets generate more on-chain transactions per event than binary ones — every position adjustment, every partial close, every point on the curve being traded generates an on-chain operation. On a high-gas chain, repositioning a Bitcoin price bet costs $8+ in gas fees. On Somnia's 1M+ TPS, sub-cent transaction architecture, continuous position updates become economically viable. There is a serious argument that Tide should be Somnia-native from day one: the product is genuinely constrained by gas costs on existing chains in a way that the institutional traders of Inframarkets are not.",
+    somniaLabel: "Very High",
+    somniaPoints: [
+      "Continuous scalar position updates across 50 outcome points become economically viable at sub-cent gas",
+      "1M+ TPS handles simultaneous position adjustments across many markets without slippage",
+      "Retail-scale participation unlocked — small bets that are currently uneconomic become viable",
+      "EVM-compatible deployment without full contract rewrite",
+      "Could be a flagship Somnia DeFi protocol — genuinely novel financial product category",
+    ],
     systemPrompt: `You are a senior venture analyst. Deep dive complete on Tide — scalar/continuum prediction market protocol.
 
 KEY FACTS: Pre-launch, pre-revenue. "Make Precision Pay." Core insight: binary markets flatten edge. Scalar bets on real numbers: price, funding, TVL, OI, spread, on-chain KPIs. TAM $1.5T, SAM $155B on-chain. Comparables: Polymarket $1B→$8B+; Kalshi $2B→$11B in months of 2025. Roadmap: Q2 2026 public launch. Team: Jo Lim, Othniel Naga, Joshua Ong. Multi-ETHGlobal + Hyperliquid 2025 hackathon winners. ~$20M raised across prior ventures. CRITICAL GAP: NO liquidity bootstrapping plan in deck. STRUCTURAL ADVANTAGE: standalone protocol, platform independent, no X/TikTok API dependency risk. Somnia fit: VERY HIGH — scalar markets require constant position updates, economically broken on high-gas chains. Analyst verdict: Watch closely — compelling scalar insight, strongest Somnia fit, but liquidity bootstrapping is existential and must be answered before investing.
@@ -116,39 +188,81 @@ Be direct, reference specific data, challenge assumptions.`
     score: 63,
     verdict: "HIGH POTENTIAL",
     tagline: "From the TikTok for Football to the Global Home of Sports.",
-    description: "AI-powered talent discovery meets Web3 fan engagement. NFT PlayrCards serve as evolving digital CVs for grassroots players — making 97% of talent visible to scouts for the first time.",
+    description: "AI-powered football talent discovery meets Web3 fan engagement. NFT PlayrCards serve as evolving digital CVs for grassroots players — making 97% of talent visible to scouts for the first time. 85K MAU in 4 months with under $30K marketing spend.",
     metrics: [
       { label: "MAU", value: "85K" },
       { label: "Downloads", value: "130K" },
       { label: "Social views", value: "55M+" },
-      { label: "Upload rate", value: "12% (vs 3-5% avg)" },
+      { label: "Upload rate", value: "12% (vs 3–5%)" },
       { label: "Marketing spend", value: "<$30K total" },
       { label: "CAC", value: "<€0.50" },
     ],
     scores: { "Traction": [22,25], "Market": [7,20], "Biz model": [10,20], "Team": [12,15], "Somnia": [9,10], "Upside": [3,10] },
     highlights: [
-      { icon: "🚀", title: "Best traction in portfolio", desc: "85K MAU in 4 months with <$30K spend. 12% upload rate vs 3–5% industry average. Sub-€0.50 CAC. Exceptional early product metrics." },
-      { icon: "⚽", title: "Genuine problem solved", desc: "97% of grassroots talent never gets scouted. PlayrCards create verifiable, on-chain football CVs that scouts can discover — a real B2B data product, not just social." },
-      { icon: "🌍", title: "MENA first-mover", desc: "90%+ users from MENA. $100B+ in government/private football investment committed to the region. 450M+ football-obsessed mobile-first population." },
-      { icon: "🏆", title: "Strongest team of all three", desc: "CEO: Forbes 40u40, ex-VP Growth Pentera ($1B+). Co-founder: licensed FIFA agent who discovered Hakan Çalhanoğlu. Advisors: ex-Adidas, Globe Soccer Director." },
+      { icon: "🚀", title: "Best traction in portfolio", desc: "85K MAU in 4 months with <$30K spend. 12% upload rate vs 3–5% industry average. Sub-€0.50 CAC. By far the strongest early product metrics of the three ventures." },
+      { icon: "⚽", title: "Genuine problem solved", desc: "97% of grassroots talent never gets scouted. PlayrCards create verifiable on-chain football CVs discoverable by scouts — a real B2B data product, not just a social app." },
+      { icon: "🌍", title: "MENA first-mover", desc: "90%+ users from MENA. $100B+ in government/private football investment committed to the region. 450M+ football-obsessed, mobile-first population with <€0.50 CAC." },
+      { icon: "🏆", title: "Strongest team of all three", desc: "CEO is Forbes 40u40, ex-VP Growth Pentera ($1B+). Co-founder is a licensed FIFA agent who discovered Hakan Çalhanoğlu. Most operationally experienced leadership in the portfolio." },
     ],
     risks: [
-      "Real SAM is ~$1–2B (football social/scouting niche), not the $100B football economy cited",
-      "Zero revenue — 85K users haven't converted to any payment yet",
-      "$15M pre-money valuation is aggressive for a pre-revenue product",
-      "Web3/NFT layer adds friction for MENA teenage audience — Web3-optional architecture worth serious consideration"
+      "Real SAM is ~$1–2B (football social/scouting niche), not the $100B football economy cited — this materially reframes the valuation conversation.",
+      "Zero revenue — 85K engaged users have not converted to any form of payment. The traction-to-revenue bridge is the central unproven hypothesis.",
+      "$15M pre-money valuation is aggressive for a pre-revenue product in a niche market — negotiate before committing.",
+      "Web3/NFT layer adds wallet setup friction for MENA teenage audience — may be slowing mainstream adoption. Web3-optional architecture is worth serious exploration.",
+      "Token ($PLAYR) and TGE introduces MiCA (EU) and Howey Test (US) regulatory complexity on top of what could be a clean SaaS + advertising business.",
+      "Competing for attention against Instagram and TikTok — both of which can add football creator features at any time without meaningful cost.",
     ],
     team: [
-      { name: "Fabio Murolo", role: "CEO & Founder", bg: "Forbes 40u40. BMW CEO of Year Sports Innovation. Ex-VP Growth Pentera ($1B+ co.). Post-MBA exit." },
-      { name: "Lami Ejupi", role: "Co-Founder & Head of Football", bg: "Licensed FIFA agent. Discovered Hakan Çalhanoğlu. Manages dozens of pros across Europe & MENA." },
+      { name: "Fabio Murolo", role: "CEO & Founder", bg: "Forbes 40 Under 40. BMW CEO of the Year — Sports Innovation. Ex-VP Growth at Pentera (scaled to $1B+ valuation). Serial entrepreneur with post-MBA exit. Former youth professional footballer." },
+      { name: "Lami Ejupi", role: "Co-Founder & Head of Football", bg: "Licensed FIFA agent. Founder of a top-tier agency. Discovered elite players including Hakan Çalhanoğlu. Currently manages dozens of professionals across Europe & MENA." },
     ],
     advisors: [
-      "Philipp Keller — CEO Hirschen Group (ex-Adidas, Red Bull)",
-      "Dr Michael Kissler — MiCA/Web3 specialist lawyer",
-      "Aaron Goldstein — ex-FTBL, 4M+ followers, UEFA/EA Sports campaigns",
-      "Nicola Antognetti — Director Globe Soccer Awards"
+      "🎯 Philipp Keller — CEO Hirschen Group (ex-Adidas brand strategy, Red Bull campaigns)",
+      "⚖️ Dr Michael Kissler — MiCA & Web3 specialist lawyer, one of Europe's foremost experts on crypto legal frameworks",
+      "📱 Aaron Goldstein — Ex-FTBL / WSE, 4M+ followers, campaigns with Heineken, UEFA, EA Sports, Dybala, Di Maria",
+      "🏆 Nicola Antognetti — Director Globe Soccer Awards, strategic partnerships & football relations",
     ],
-    somnia: "HIGH — High-frequency NFT minting (PlayrCards), micro in-app rewards, real-time fan voting on-chain. Ethereum mainnet is unworkable for this volume of low-value events. Somnia's gasless/near-gasless architecture is required for the product vision to work at scale. Strong candidate for flagship Somnia consumer dApp in MENA.",
+    capitalRaised: [
+      "$350K — Angel investors",
+      "$200K — VC side investment committed",
+      "$150K — Government grant (paid out Dec 2025)",
+      "$600K — Founder capital · Total raised: $1.3M of $5M target",
+    ],
+    report: [
+      {
+        label: "The core thesis",
+        body: "OnePlayr is solving a genuinely underserved problem: 97% of grassroots football talent globally never gets in front of a scout — not because they lack ability but because they lack visibility. The platform combines TikTok-style short video with NFT-based PlayrCards — evolving digital CVs that track a player's stats, achievements and pro interactions on-chain. Scouts and clubs subscribe to access the talent pool. Fans can invest in players via their PlayrCards. It's a vertically integrated discovery-to-monetisation flywheel targeting MENA first — a region with $100B+ in football investment committed over the next decade and football as the dominant cultural obsession."
+      },
+      {
+        label: "What the traction proves — and what it doesn't",
+        body: "85K MAU, 130K downloads, 55M+ social video views, 12% upload rate vs a 3–5% industry average — all generated with under $30K in total marketing spend. A sub-€0.50 CAC is exceptional and verifiable. These numbers prove two things: there is genuine demand from grassroots players to be seen, and the MENA creator distribution model works efficiently. What they don't prove is monetisation. The 85K users are not paying for anything. The 5 pro clubs and 37 scouts 'in pipeline' have not converted to subscriptions. The $18K MRR 'projected post Q2 2026' is a target. The gap between engaged users and paying customers is the central unresolved question for this business."
+      },
+      {
+        label: "The market size correction",
+        body: "The '$100B football economy' cited in the deck is TV broadcast rights, player transfer fees, stadium revenue, and kit sponsorships. None of that is addressable by a creator or scouting app. The actual serviceable market is the intersection of football social apps — Tonsser at $200M valuation, Grintafy at $50M — and B2B scouting tools, a fragmented market worth perhaps $200–400M globally. A realistic SAM is $1–2B. This reframes the $15M pre-money valuation significantly: OnePlayr is a multiple of a $1–2B niche, not a fraction of a $100B market. That's a very different risk-adjusted return calculation."
+      },
+      {
+        label: "The Web3 layer — value add or friction?",
+        body: "The NFT PlayrCard concept is genuinely creative — an evolving digital CV that appreciates as a player's career progresses, that fans can invest in and benefit from. In practice, the primary audience is MENA grassroots teenagers and their families. Getting them to set up wallets, understand NFT mechanics, and transact in $PLAYR tokens is a meaningful friction layer on top of what could be a simple, fast-growing social video product. The honest strategic question: should the Web3 layer be optional rather than required? A Web3-optional architecture might grow the user base 10x faster and expand the addressable market significantly — and still capture the full Web3 upside for users who want it."
+      },
+      {
+        label: "Key diligence questions",
+        body: "1. What is the actual conversion rate from free user to any form of paying customer — even informal — in early conversations with the 5 pipeline clubs or 37 scouts? A single paying club changes the risk calculus significantly. 2. Has the team modelled a Web3-optional architecture where the social video and scouting product works without wallet setup, and NFT/token layer is an optional add-on? 3. What does the path to $1M ARR look like concretely — how many clubs, at what price, what ad RPM at what MAU? 4. What commercial structure is attached to the Globe Soccer Awards partnership? 5. What is the $PLAYR token vesting schedule and cap table impact of an underperforming TGE?"
+      },
+    ],
+    reportVerdict: {
+      value: "High potential, high risk",
+      sub: "Best traction and best team of the three ventures. But the gap between where the business is today (engaged social app with no revenue) and where it needs to be to justify $15M pre-money is the widest of the group. Negotiate on valuation, push for a concrete answer on Web3-optional architecture, get sight of any commercial conversion signal from the scout/club pipeline before committing."
+    },
+    somnia: "OnePlayr is a natural Somnia consumer dApp. The NFT PlayrCard mechanic — every video upload, scout interaction, fan vote, and achievement badge potentially recorded on-chain — generates exactly the kind of high-frequency, low-value transaction volume that makes Ethereum mainnet unworkable. A player posting a challenge video, 50,000 fans voting, a scout bookmarking the card — these should all be gasless or near-gasless on-chain events. Somnia's consumer and gaming ecosystem focus maps directly onto OnePlayr's use case. A Somnia partnership for OnePlayr's MENA rollout would give Somnia a high-engagement flagship consumer dApp with verifiable on-chain activity from a demographic (mobile-first, football-obsessed MENA Gen Z) that is underrepresented in current Web3 ecosystems.",
+    somniaLabel: "High",
+    somniaPoints: [
+      "Gasless or near-gasless NFT minting for PlayrCards — removes the biggest Web3 friction point for MENA mobile users",
+      "Micro in-app rewards (likes, votes, badges) become economically viable as on-chain events at sub-cent cost",
+      "1M+ TPS handles real-time viral moments — 50K fans voting simultaneously on a challenge video without congestion",
+      "Consumer-grade UX — users don't see or pay for gas, making the Web3 layer invisible and frictionless",
+      "Flagship consumer dApp opportunity for Somnia in the MENA ecosystem",
+    ],
     systemPrompt: `You are a senior venture analyst. Deep dive complete on OnePlayr — football social / Web3 talent discovery platform.
 
 KEY FACTS: 85K MAU, 130K downloads in 4 months, 55M+ social views, 12% upload rate (vs 3-5% avg), <€0.50 CAC, <$30K total marketing. 90%+ users MENA. 5 pro clubs + 37 scouts in pipeline — NOT yet converted. Zero revenue. $18K MRR is a Q2 2026 TARGET. Raise: $5M asking, $15M pre / $20M post, Equity SAFE + Token Warrant. $1.3M already raised. Team: Fabio Murolo (CEO, Forbes 40u40, ex-VP Growth Pentera $1B+), Lami Ejupi (Co-Founder, licensed FIFA agent, discovered Hakan Çalhanoğlu). MARKET SIZE CORRECTION: $100B football economy is TV rights/transfers — NOT addressable. Real SAM ~$1-2B. WEB3 QUESTION: Web3-optional architecture might grow 10x faster. Somnia fit: HIGH — high-frequency NFT minting, gasless UX critical for MENA mobile. Analyst verdict: High potential, high risk. Best traction + best team, but biggest revenue gap. Negotiate valuation, push Web3-optional architecture question.
@@ -157,7 +271,7 @@ Be direct, reference specific numbers, challenge assumptions.`
   }
 };
 
-const NAV_ITEMS = ["overview", "highlights", "team", "risks", "somnia", "chat"];
+const NAV_ITEMS = ["overview", "highlights", "report", "team", "risks", "somnia", "chat"];
 
 const API_URL = process.env.REACT_APP_API_URL || "/api/chat";
 
@@ -356,7 +470,7 @@ function VentureDetail({ venture: v, onBack }) {
             cursor: "pointer", fontWeight: section === item ? 500 : 400,
             textTransform: "capitalize", whiteSpace: "nowrap"
           }}>
-            {item === "chat" ? "💬 Ask analyst" : item}
+            {item === "chat" ? "💬 Ask analyst" : item === "report" ? "Full report" : item}
           </button>
         ))}
       </div>
@@ -406,7 +520,7 @@ function VentureDetail({ venture: v, onBack }) {
         {section === "highlights" && (
           <div style={{ flex: 1, overflowY: "auto", padding: "24px" }}>
             <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 16 }}>What makes this compelling</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 14, marginBottom: 28 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 14 }}>
               {v.highlights.map((h, i) => (
                 <div key={i} style={{ padding: "18px 20px", border: `1px solid ${v.colorBorder}`, borderRadius: 12, background: v.colorDim }}>
                   <div style={{ fontSize: 22, marginBottom: 10 }}>{h.icon}</div>
@@ -415,14 +529,21 @@ function VentureDetail({ venture: v, onBack }) {
                 </div>
               ))}
             </div>
-            <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 12 }}>Key risks</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {v.risks.map((r, i) => (
-                <div key={i} style={{ display: "flex", gap: 10, padding: "12px 14px", background: "#fef2f2", borderRadius: 8, border: "1px solid #fecaca" }}>
-                  <span style={{ color: "#ef4444", fontSize: 12, marginTop: 1, flexShrink: 0 }}>⚠</span>
-                  <span style={{ fontSize: 12.5, color: "#111827", lineHeight: 1.6 }}>{r}</span>
-                </div>
-              ))}
+          </div>
+        )}
+
+        {section === "report" && (
+          <div style={{ flex: 1, overflowY: "auto", padding: "24px" }}>
+            {v.report.map((s, i) => (
+              <div key={i} style={{ marginBottom: 24 }}>
+                <div style={{ fontSize: 10.5, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: v.color, marginBottom: 8 }}>{s.label}</div>
+                <div style={{ fontSize: 13.5, color: "#374151", lineHeight: 1.85 }}>{s.body}</div>
+              </div>
+            ))}
+            <div style={{ padding: "20px 22px", border: `1px solid ${v.colorBorder}`, borderRadius: 12, background: v.colorDim, marginTop: 8 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: v.color, marginBottom: 6 }}>Analyst verdict</div>
+              <div style={{ fontSize: 22, fontWeight: 700, color: v.color, marginBottom: 6 }}>{v.reportVerdict.value}</div>
+              <div style={{ fontSize: 12.5, color: "#4b5563", lineHeight: 1.65 }}>{v.reportVerdict.sub}</div>
             </div>
           </div>
         )}
@@ -443,6 +564,9 @@ function VentureDetail({ venture: v, onBack }) {
                   </div>
                 </div>
               ))}
+              {v.teamNote && (
+                <div style={{ padding: "12px 16px", background: "#f9fafb", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12.5, color: "#4b5563" }}>{v.teamNote}</div>
+              )}
             </div>
             <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 12 }}>Advisors & backers</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
@@ -452,12 +576,24 @@ function VentureDetail({ venture: v, onBack }) {
                 </div>
               ))}
             </div>
+            {v.capitalRaised && (
+              <>
+                <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", margin: "24px 0 12px" }}>Capital raised to date</h3>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {v.capitalRaised.map((c, i) => (
+                    <div key={i} style={{ padding: "10px 14px", background: "#f9fafb", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12.5, color: "#111827", lineHeight: 1.5 }}>
+                      {c}
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
 
         {section === "risks" && (
           <div style={{ flex: 1, overflowY: "auto", padding: "24px" }}>
-            <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 16 }}>Risk assessment</h3>
+            <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 16 }}>Risk register</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
               {v.risks.map((r, i) => (
                 <div key={i} style={{ padding: "16px 18px", background: "#fef2f2", borderRadius: 12, border: "1px solid #fecaca", display: "flex", gap: 12 }}>
@@ -477,17 +613,14 @@ function VentureDetail({ venture: v, onBack }) {
         {section === "somnia" && (
           <div style={{ flex: 1, overflowY: "auto", padding: "24px" }}>
             <div style={{ padding: "20px 22px", border: "1px solid #bfdbfe", borderRadius: 12, background: "#eff6ff", marginBottom: 20 }}>
-              <div style={{ fontSize: 11, fontWeight: 500, color: "#1d4ed8", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>Somnia network fit</div>
+              <div style={{ fontSize: 11, fontWeight: 500, color: "#1d4ed8", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>
+                Somnia network fit — {v.somniaLabel}
+              </div>
               <p style={{ fontSize: 13.5, lineHeight: 1.8, color: "#111827", margin: 0 }}>{v.somnia}</p>
             </div>
             <div style={{ padding: "18px 20px", background: "#f9fafb", borderRadius: 12, border: "1px solid #e5e7eb" }}>
-              <div style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>What Somnia enables</div>
-              {[
-                "1M+ TPS throughput handles high-frequency on-chain events without bottleneck",
-                "Sub-cent transaction costs make micro-value interactions economically viable",
-                "EVM-compatible — existing Solidity contracts deployable without full rewrite",
-                "Consumer-grade UX without gas friction for end users"
-              ].map((point, i) => (
+              <div style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>What Somnia enables for {v.name}</div>
+              {v.somniaPoints.map((point, i) => (
                 <div key={i} style={{ display: "flex", gap: 10, fontSize: 12.5, lineHeight: 1.6, marginBottom: 8 }}>
                   <span style={{ color: "#1d4ed8", flexShrink: 0 }}>✓</span>
                   <span style={{ color: "#374151" }}>{point}</span>
@@ -546,20 +679,18 @@ export default function App() {
   return (
     <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", minHeight: "100vh", background: "#f9fafb", padding: "40px 24px" }}>
       <div style={{ maxWidth: 960, margin: "0 auto" }}>
-        {/* Header */}
         <div style={{ marginBottom: 36 }}>
           <div style={{ fontSize: 10, fontWeight: 600, color: "#9ca3af", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>
-            Venture Intelligence
+            Venture Intelligence · April 2026
           </div>
           <h1 style={{ fontSize: 30, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.2 }}>
             Top 3 Ventures — Deep Dive
           </h1>
           <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.7, maxWidth: 580, margin: 0 }}>
-            Three ventures assessed across traction, market opportunity, business model, team strength, Somnia network fit and risk-adjusted upside. Click any card to read the full analyst report and chat with a dedicated research agent.
+            Three ventures assessed across traction, market opportunity, business model, team strength and risk-adjusted upside. Click any card to read the full analyst report and chat with a dedicated research agent.
           </p>
         </div>
 
-        {/* Score pills */}
         <div style={{ display: "flex", gap: 10, marginBottom: 28, flexWrap: "wrap" }}>
           {Object.values(VENTURES).map(v => (
             <div key={v.id} onClick={() => setActive(v.id)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 14px", borderRadius: 10, border: `1px solid ${v.colorBorder}`, background: v.colorDim, cursor: "pointer" }}>
@@ -570,13 +701,11 @@ export default function App() {
           ))}
         </div>
 
-        {/* Cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16, marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
           {Object.values(VENTURES).map(v => (
             <VentureCard key={v.id} venture={v} onClick={() => setActive(v.id)}/>
           ))}
         </div>
-
       </div>
     </div>
   );
