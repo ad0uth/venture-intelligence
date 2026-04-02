@@ -176,98 +176,101 @@ KEY FACTS: Pre-launch, pre-revenue. "Make Precision Pay." Core insight: binary m
 Be direct, reference specific data, challenge assumptions.`
   },
 
-  oneplayr: {
-    id: "oneplayr",
-    name: "OnePlayr",
-    color: "#22c55e",
-    colorDim: "#22c55e20",
-    colorBorder: "#22c55e40",
-    sector: "Football Social / Web3",
-    stage: "Live · $5M raise",
-    valuation: "$15M pre / $20M post",
-    score: 63,
-    verdict: "HIGH POTENTIAL",
-    tagline: "From the TikTok for Football to the Global Home of Sports.",
-    description: "AI-powered football talent discovery meets Web3 fan engagement. NFT PlayrCards serve as evolving digital CVs for grassroots players — making 97% of talent visible to scouts for the first time. 85K MAU in 4 months with under $30K marketing spend.",
+  kash: {
+    id: "kash",
+    name: "Kash",
+    color: "#F5C800",
+    colorDim: "#F5C80020",
+    colorBorder: "#F5C80040",
+    sector: "Prediction Markets / Social Finance",
+    stage: "Pre-Seed · $2M raised",
+    valuation: "Undisclosed",
+    score: 58,
+    verdict: "WATCH CLOSELY",
+    tagline: "If it's trending - it's tradable.",
+    description: "Kash is a white-label prediction market platform that embeds directly into social media feeds via an AI-powered bot. Social media brands and KOLs deploy branded prediction markets to their audiences on X in 48 hours, sharing trading revenue with Kash.",
     metrics: [
-      { label: "MAU", value: "85K" },
-      { label: "Downloads", value: "130K" },
-      { label: "Social views", value: "55M+" },
-      { label: "Upload rate", value: "12% (vs 3–5%)" },
-      { label: "Marketing spend", value: "<$30K total" },
-      { label: "CAC", value: "<€0.50" },
+      { label: "Pre-Seed Raise", value: "$2M" },
+      { label: "Market Volume (2025)", value: "$44B industry" },
+      { label: "Setup Time", value: "48 hours" },
+      { label: "Subscription Fee", value: "$3K-$5K/mo" },
+      { label: "Revenue Share", value: "30% of trading fees" },
+      { label: "Backers", value: "Coinbase, Animoca, Spartan" },
     ],
-    scores: { "Traction": [22,25], "Market": [7,20], "Biz model": [10,20], "Team": [12,15], "Somnia": [9,10], "Upside": [3,10] },
+    scores: { "Traction": [8,25], "Market": [16,20], "Biz model": [14,20], "Team": [7,15], "Somnia": [7,10], "Upside": [6,10] },
     highlights: [
-      { icon: "🚀", title: "Best traction in portfolio", desc: "85K MAU in 4 months with <$30K spend. 12% upload rate vs 3–5% industry average. Sub-€0.50 CAC. By far the strongest early product metrics of the three ventures." },
-      { icon: "⚽", title: "Genuine problem solved", desc: "97% of grassroots talent never gets scouted. PlayrCards create verifiable on-chain football CVs discoverable by scouts — a real B2B data product, not just a social app." },
-      { icon: "🌍", title: "MENA first-mover", desc: "90%+ users from MENA. $100B+ in government/private football investment committed to the region. 450M+ football-obsessed, mobile-first population with <€0.50 CAC." },
-      { icon: "🏆", title: "Strongest team of all three", desc: "CEO is Forbes 40u40, ex-VP Growth Pentera ($1B+). Co-founder is a licensed FIFA agent who discovered Hakan Çalhanoğlu. Most operationally experienced leadership in the portfolio." },
+      { icon: "🤖", title: "Zero friction for end users", desc: "Users predict by replying to posts — no app, no wallet setup, no KYC. The entire prediction experience lives inside the social feed users already use." },
+      { icon: "🏷️", title: "B2B white-label model", desc: "Kash sells infrastructure to social brands, not to end users. Partners pay $3-5K/month plus 30% revenue share, deploying branded bots to their own audiences in 48 hours." },
+      { icon: "⚡", title: "Permissionless, instant markets", desc: "AI agents create and resolve markets autonomously using zkTLS verification. Any topic becomes a tradeable market in seconds — a structural advantage over Polymarket and Kalshi." },
+      { icon: "💰", title: "Strong pre-seed syndicate", desc: "Coinbase Ventures, Animoca Brands, Spartan Group and Sui Foundation participated — investors with real distribution networks in the crypto and gaming ecosystems Kash needs." },
     ],
     risks: [
-      "Real SAM is ~$1–2B (football social/scouting niche), not the $100B football economy cited — this materially reframes the valuation conversation.",
-      "Zero revenue — 85K engaged users have not converted to any form of payment. The traction-to-revenue bridge is the central unproven hypothesis.",
-      "$15M pre-money valuation is aggressive for a pre-revenue product in a niche market — negotiate before committing.",
-      "Web3/NFT layer adds wallet setup friction for MENA teenage audience — may be slowing mainstream adoption. Web3-optional architecture is worth serious exploration.",
-      "Token ($PLAYR) and TGE introduces MiCA (EU) and Howey Test (US) regulatory complexity on top of what could be a clean SaaS + advertising business.",
-      "Competing for attention against Instagram and TikTok — both of which can add football creator features at any time without meaningful cost.",
+      "Platform dependency: Kash runs inside X's infrastructure — an API policy change or native prediction market feature from X could disable the product entirely.",
+      "Team not yet hired: The deck disclaimer explicitly states key team members are undergoing recruitment and are not yet formally employed — founding team composition post-funding is uncertain.",
+      "Liquidity cold-start: New partner deployments face thin two-sided markets with poor pricing, potentially driving poor user experience and partner churn before scale is achieved.",
+      "AI oracle disputes: A high-profile incorrect market resolution could destroy community trust overnight — no clear on-chain dispute mechanism is described in the deck.",
+      "Regulatory exposure: No licenses or regulatory clearances secured — permissionless approach is a feature now but creates significant legal risk as the platform scales.",
+      "Incumbent competition: Polymarket ($9B) and Kalshi ($11B) have the resources to replicate the white-label B2B model if Kash proves the concept works.",
     ],
     team: [
-      { name: "Fabio Murolo", role: "CEO & Founder", bg: "Forbes 40 Under 40. BMW CEO of the Year — Sports Innovation. Ex-VP Growth at Pentera (scaled to $1B+ valuation). Serial entrepreneur with post-MBA exit. Former youth professional footballer." },
-      { name: "Lami Ejupi", role: "Co-Founder & Head of Football", bg: "Licensed FIFA agent. Founder of a top-tier agency. Discovered elite players including Hakan Çalhanoğlu. Currently manages dozens of professionals across Europe & MENA." },
+      { name: "Lucas Martin Calderon", role: "Founder & CEO", bg: "Blockchain security for governments and tier-1 banks. Crypto hedge fund HFT strategies. Built the Bonding Curve AMM mechanism from scratch. No disclosed co-founder or named CTO as of deck date." },
     ],
     advisors: [
-      "🎯 Philipp Keller — CEO Hirschen Group (ex-Adidas brand strategy, Red Bull campaigns)",
-      "⚖️ Dr Michael Kissler — MiCA & Web3 specialist lawyer, one of Europe's foremost experts on crypto legal frameworks",
-      "📱 Aaron Goldstein — Ex-FTBL / WSE, 4M+ followers, campaigns with Heineken, UEFA, EA Sports, Dybala, Di Maria",
-      "🏆 Nicola Antognetti — Director Globe Soccer Awards, strategic partnerships & football relations",
-    ],
-    capitalRaised: [
-      "$350K — Angel investors",
-      "$200K — VC side investment committed",
-      "$150K — Government grant (paid out Dec 2025)",
-      "$600K — Founder capital · Total raised: $1.3M of $5M target",
+      "Coinbase Ventures — strategic backer (Base ecosystem)",
+      "Animoca Brands — backer (gaming/NFT distribution network)",
+      "Spartan Group — backer (crypto-native VC, deep DeFi expertise)",
+      "Sui Foundation — backer (potential multi-chain expansion signal)",
+      "Big Brain Holdings — backer",
+      "Halo Capital — backer",
+      "Moonrock Capital — backer",
+      "Kosmos Ventures — backer",
+      "Polaris Fund — backer",
+      "Fabric VC — backer",
     ],
     report: [
       {
-        label: "The core thesis",
-        body: "OnePlayr is solving a genuinely underserved problem: 97% of grassroots football talent globally never gets in front of a scout — not because they lack ability but because they lack visibility. The platform combines TikTok-style short video with NFT-based PlayrCards — evolving digital CVs that track a player's stats, achievements and pro interactions on-chain. Scouts and clubs subscribe to access the talent pool. Fans can invest in players via their PlayrCards. It's a vertically integrated discovery-to-monetisation flywheel targeting MENA first — a region with $100B+ in football investment committed over the next decade and football as the dominant cultural obsession."
+        label: "What They Do",
+        body: "Kash is a white-label prediction market bot that runs inside social media feeds — currently X, with TikTok and Instagram signaled as future targets. Social media brands and KOLs deploy a branded prediction market bot to their audience in 48 hours without writing any code. Users predict by replying to posts, with no app or wallet required. The AI handles market creation, resolution via zkTLS zero-knowledge proofs, and automatic winner payouts in USDC. Flash markets as short as 15 minutes let partners capitalise on trending moments in real time."
       },
       {
-        label: "What the traction proves — and what it doesn't",
-        body: "85K MAU, 130K downloads, 55M+ social video views, 12% upload rate vs a 3–5% industry average — all generated with under $30K in total marketing spend. A sub-€0.50 CAC is exceptional and verifiable. These numbers prove two things: there is genuine demand from grassroots players to be seen, and the MENA creator distribution model works efficiently. What they don't prove is monetisation. The 85K users are not paying for anything. The 5 pro clubs and 37 scouts 'in pipeline' have not converted to subscriptions. The $18K MRR 'projected post Q2 2026' is a target. The gap between engaged users and paying customers is the central unresolved question for this business."
+        label: "Business Model",
+        body: "Partners pay $3,000/month (12-month deal) or $5,000/month (6-month deal) for a white-labeled prediction bot, plus a 30% revenue share on all trading fees generated by their audience. Kash handles all infrastructure, compliance navigation, and settlement. The subscription provides predictable baseline revenue; the revenue share creates asymmetric upside from high-volume partners. End users are not charged directly — they earn in USDC and $KASH tokens."
       },
       {
-        label: "The market size correction",
-        body: "The '$100B football economy' cited in the deck is TV broadcast rights, player transfer fees, stadium revenue, and kit sponsorships. None of that is addressable by a creator or scouting app. The actual serviceable market is the intersection of football social apps — Tonsser at $200M valuation, Grintafy at $50M — and B2B scouting tools, a fragmented market worth perhaps $200–400M globally. A realistic SAM is $1–2B. This reframes the $15M pre-money valuation significantly: OnePlayr is a multiple of a $1–2B niche, not a fraction of a $100B market. That's a very different risk-adjusted return calculation."
+        label: "Competitive Position",
+        body: "Kash occupies a white space neither Polymarket nor Kalshi fills — the B2B white-label layer. Polymarket curates markets slowly and has no partner program; Kalshi requires CFTC approval for each market and takes weeks to months per launch. Kash creates markets in seconds, is permissionless, and deploys under the partner's brand. The risk: this white space is only defensible while the incumbents focus on their own consumer brands. Polymarket (backed by $2B from ICE) could replicate the B2B model with one product decision."
       },
       {
-        label: "The Web3 layer — value add or friction?",
-        body: "The NFT PlayrCard concept is genuinely creative — an evolving digital CV that appreciates as a player's career progresses, that fans can invest in and benefit from. In practice, the primary audience is MENA grassroots teenagers and their families. Getting them to set up wallets, understand NFT mechanics, and transact in $PLAYR tokens is a meaningful friction layer on top of what could be a simple, fast-growing social video product. The honest strategic question: should the Web3 layer be optional rather than required? A Web3-optional architecture might grow the user base 10x faster and expand the addressable market significantly — and still capture the full Web3 upside for users who want it."
+        label: "Critical Gaps",
+        body: "Three flags stand above the rest. The team disclaimer is unusually candid: key hires are not yet formally employed, meaning the company that closes this round may look different from what is presented. Platform dependency on X's API is existential — X could terminate bot functionality without warning or build prediction market features natively. The AI oracle, while technically elegant, has not been stress-tested at scale; a prominent wrong resolution call would damage community trust in a product built entirely on that trust."
       },
       {
-        label: "Key diligence questions",
-        body: "1. What is the actual conversion rate from free user to any form of paying customer — even informal — in early conversations with the 5 pipeline clubs or 37 scouts? A single paying club changes the risk calculus significantly. 2. Has the team modelled a Web3-optional architecture where the social video and scouting product works without wallet setup, and NFT/token layer is an optional add-on? 3. What does the path to $1M ARR look like concretely — how many clubs, at what price, what ad RPM at what MAU? 4. What commercial structure is attached to the Globe Soccer Awards partnership? 5. What is the $PLAYR token vesting schedule and cap table impact of an underperforming TGE?"
+        label: "Market Opportunity",
+        body: "Prediction market trading volume hit $44-63 billion in 2025 and is tracking toward $100+ billion in 2026. Polymarket and Kalshi hold 97.5% of current volume — Kash frames this as proof of demand rather than a competitive barrier. The real market Kash is targeting is adjacent: the hundreds of millions of social media users who form opinionated communities around sports, crypto, and entertainment but currently have no financial stake in their predictions."
+      },
+      {
+        label: "Key Diligence Questions",
+        body: "1. Who is actually employed and building the product today — can we speak to the core engineering team? 2. What is the contractual or commercial relationship with X, and what is the contingency plan if X restricts bot-based financial activity? 3. How does a new partner solve the liquidity cold-start problem — what does month-one trading volume look like realistically? 4. Walk through a disputed market resolution end-to-end — who has final authority and can users be made whole? 5. What is the regulatory strategy as Kash scales past $1M monthly trading volume?"
       },
     ],
     reportVerdict: {
-      value: "High potential, high risk",
-      sub: "Best traction and best team of the three ventures. But the gap between where the business is today (engaged social app with no revenue) and where it needs to be to justify $15M pre-money is the widest of the group. Negotiate on valuation, push for a concrete answer on Web3-optional architecture, get sight of any commercial conversion signal from the scout/club pipeline before committing."
+      value: "Watch Closely",
+      sub: "Kash has identified a genuine white space in the prediction market ecosystem — the B2B layer that turns any social media community into a branded prediction market without friction. The investor syndicate is credible and the technology is real. However, the team-not-yet-hired disclosure is a material concern, the product is pre-revenue at scale, and the entire business sits on X's API infrastructure with no contractual protection. Track through team formation and the first 3-5 paying partner milestones before committing capital."
     },
-    somnia: "OnePlayr is a natural Somnia consumer dApp. The NFT PlayrCard mechanic — every video upload, scout interaction, fan vote, and achievement badge potentially recorded on-chain — generates exactly the kind of high-frequency, low-value transaction volume that makes Ethereum mainnet unworkable. A player posting a challenge video, 50,000 fans voting, a scout bookmarking the card — these should all be gasless or near-gasless on-chain events. Somnia's consumer and gaming ecosystem focus maps directly onto OnePlayr's use case. A Somnia partnership for OnePlayr's MENA rollout would give Somnia a high-engagement flagship consumer dApp with verifiable on-chain activity from a demographic (mobile-first, football-obsessed MENA Gen Z) that is underrepresented in current Web3 ecosystems.",
+    somnia: "Kash is a strong fit for Somnia's infrastructure. Prediction markets require a high volume of small, fast transactions — every user prediction is an on-chain event, every resolution is a settlement, and every payout is a transfer. Kash currently runs on Base, but Somnia's 1M+ TPS and sub-cent transaction costs would allow Kash to sponsor gas fees at a fraction of current cost, enabling genuinely micro-stake markets under $1 that are currently economically unviable. The flash market use case — 15-minute markets on trending topics — requires near-instant finality that Somnia provides. EVM compatibility means the migration path is feasible without a full rebuild.",
     somniaLabel: "High",
     somniaPoints: [
-      "Gasless or near-gasless NFT minting for PlayrCards — removes the biggest Web3 friction point for MENA mobile users",
-      "Micro in-app rewards (likes, votes, badges) become economically viable as on-chain events at sub-cent cost",
-      "1M+ TPS handles real-time viral moments — 50K fans voting simultaneously on a challenge video without congestion",
-      "Consumer-grade UX — users don't see or pay for gas, making the Web3 layer invisible and frictionless",
-      "Flagship consumer dApp opportunity for Somnia in the MENA ecosystem",
+      "Sub-cent transactions make micro-stake prediction markets viable — enabling sub-$1 bets currently uneconomical on Base",
+      "1M+ TPS supports flash markets at social scale — millions of concurrent predictions across thousands of active partner bots simultaneously",
+      "EVM compatibility means Kash's existing smart contracts and settlement infrastructure migrate with minimal re-engineering",
+      "Low settlement cost enables the passive yield product to distribute frequent small USDC rewards economically",
+      "High throughput future-proofs TikTok and Instagram expansion — transaction volume at that scale would exceed Base's practical capacity",
     ],
-    systemPrompt: `You are a senior venture analyst. Deep dive complete on OnePlayr — football social / Web3 talent discovery platform.
+    systemPrompt: `You are a senior venture analyst. Deep dive complete on Kash - a white-label social-native prediction market platform built on Base, targeting social media brands and KOLs as B2B customers.
 
-KEY FACTS: 85K MAU, 130K downloads in 4 months, 55M+ social views, 12% upload rate (vs 3-5% avg), <€0.50 CAC, <$30K total marketing. 90%+ users MENA. 5 pro clubs + 37 scouts in pipeline — NOT yet converted. Zero revenue. $18K MRR is a Q2 2026 TARGET. Raise: $5M asking, $15M pre / $20M post, Equity SAFE + Token Warrant. $1.3M already raised. Team: Fabio Murolo (CEO, Forbes 40u40, ex-VP Growth Pentera $1B+), Lami Ejupi (Co-Founder, licensed FIFA agent, discovered Hakan Çalhanoğlu). MARKET SIZE CORRECTION: $100B football economy is TV rights/transfers — NOT addressable. Real SAM ~$1-2B. WEB3 QUESTION: Web3-optional architecture might grow 10x faster. Somnia fit: HIGH — high-frequency NFT minting, gasless UX critical for MENA mobile. Analyst verdict: High potential, high risk. Best traction + best team, but biggest revenue gap. Negotiate valuation, push Web3-optional architecture question.
+KEY FACTS: Raised $2M pre-seed in February 2026. Backers include Coinbase Ventures, Animoca Brands, Spartan Group, Sui Foundation, Moonrock Capital, Big Brain Holdings. Founded by Lucas Martin Calderon (blockchain security for govts/tier-1 banks, crypto HFT background, built Bonding Curve AMM from scratch). CRITICAL: Deck disclaimer states team members are undergoing recruitment and NOT YET formally employed - founding team composition post-funding is uncertain. Product runs inside X (Twitter) via @kash_bot - users predict by replying to posts with no app or wallet required. White-label model: partners pay $3K/month (12-month) or $5K/month (6-month) plus 30% revenue share on trading fees. Partners get branded bot deployed in 48 hours. Markets resolved via AI + zkTLS (Reclaim Protocol) zero-knowledge proofs - permissionless and self-custodial. Flash markets as short as 15 minutes. Leverage and passive USDC yield built into protocol. Live partnership: Doppel Games (March 2026) - official prediction market for AI agent battles on X. Product in pre-testnet simulation phase - not yet at scale with paying partners. Industry: $44-63B prediction market volume in 2025; Polymarket ($9B) and Kalshi ($11B) hold 97.5% of market. No regulatory licenses or clearances secured. Kash is a ZeroID Group subsidiary.
 
-Be direct, reference specific numbers, challenge assumptions.`
+Be direct, reference specific data, challenge assumptions, and flag the team-not-yet-hired issue when relevant.`
   }
 };
 
@@ -338,22 +341,22 @@ const SUGGESTED = {
     "Walk me through the revenue at $10M monthly volume",
     "How does the IOS oracle work and what are its failure modes?",
     "How does Lorenzo actually reach commodity traders?",
-    "Make the bull case vs Tide and OnePlayr",
+    "Make the bull case vs Tide and Kash",
     "What's the smart contract audit status?"
   ],
   tide: [
     "Why is the liquidity bootstrapping problem so critical?",
-    "How does Tide's platform independence compare to what killed Kash?",
+    "How does Tide's platform independence compare to Kash's platform dependency risk?",
     "What would a credible liquidity plan look like?",
     "Make the case for Tide over Inframarkets",
     "How does Somnia change Tide's economics?"
   ],
-  oneplayr: [
-    "Bridge the gap from 85K users to $1M ARR",
-    "Is $15M pre justified at zero revenue?",
-    "Should they make Web3 optional to grow faster?",
-    "What single metric would most change the investment case?",
-    "How does the MENA foothold expand globally?"
+  kash: [
+    "The deck says the team isn't hired yet — who is actually building this right now?",
+    "X could shut down your bot tomorrow — what's the contingency plan?",
+    "Walk me through how a new partner solves the liquidity cold-start problem in month one",
+    "What happens when the AI oracle resolves a market incorrectly — who has final authority?",
+    "How does Kash's regulatory exposure compare to Polymarket and Kalshi?"
   ]
 };
 
