@@ -477,22 +477,22 @@ Be direct, reference specific data, challenge assumptions. Always ground the Ter
     colorDim: "#10b98120",
     colorBorder: "#10b98140",
     sector: "Web3 Messaging",
-    stage: "Pre-launch · Seeking seed",
+    stage: "ICO-era re-pitch · 2019 token at $0",
     valuation: "Undisclosed",
-    score: 31,
+    score: 28,
     verdict: "PASS",
     tagline: "Experience secure and private messaging.",
-    description: "Texochat is building a decentralised messaging platform for crypto users — storing messages on IPFS, enabling in-chat token and NFT transfers, and providing a white-label widget for crypto projects to embed community chat.",
-    simpleExplainer: "Texochat is building a messaging app designed specifically for cryptocurrency users. Unlike regular apps like WhatsApp or Telegram, it lets users send digital assets like tokens and NFTs directly through chat, stores messages on decentralised networks rather than company servers, and rewards users for their activity. It also offers a chat widget that crypto projects can embed on their own websites. Think of it as Telegram rebuilt for crypto holders, where no central company controls your messages or data — but the product and team are at a very early stage, and the deck does not identify who is building it.",
+    description: "Texochat is an ICO-era crypto messaging app (founded 2018, ICO August 2019) attempting to relaunch with updated Web3 features. The TXO token now trades at effectively zero and no verifiable traction has been achieved after seven years of operation.",
+    simpleExplainer: "Texochat is a messaging app for cryptocurrency users that was first launched in 2019 via a public token sale. The idea is to combine chat with a built-in crypto wallet, so users can send messages and transfer tokens in one place. The company is now re-pitching with updated features like IPFS message storage and NFT transfers. However, the token it issued in 2019 is now worth essentially nothing, and no meaningful user adoption has been publicly demonstrated in the six years since launch — the pitch deck appears to be an attempt to restart a project that did not achieve scale in its first cycle.",
     metrics: [
-      { label: "Crypto owners (global)", value: "560M" },
-      { label: "Crypto messaging users", value: "10M/month" },
-      { label: "Asia-specific SAM", value: "2M users" },
-      { label: "Token sale", value: "17% allocated" },
-      { label: "Beta", value: "Q1 2026 (testnet)" },
-      { label: "Public sale", value: "Q2 2026" },
+      { label: "Founded", value: "2018" },
+      { label: "ICO", value: "Aug 2019" },
+      { label: "TXO Token Price", value: "~$0.00" },
+      { label: "App launch (planned)", value: "2020 (undelivered)" },
+      { label: "Team size", value: "~3 people" },
+      { label: "Institutional backing", value: "None" },
     ],
-    scores: { "Traction": [2,25], "Market": [10,20], "Biz model": [7,20], "Team": [2,15], "Somnia": [7,10], "Upside": [3,10] },
+    scores: { "Traction": [2,25], "Market": [9,20], "Biz model": [5,20], "Team": [4,15], "Somnia": [5,10], "Upside": [3,10] },
     highlights: [
       { icon: "💬", title: "In-chat asset transfers", desc: "Users can send tokens and NFTs directly within conversations — a genuine feature gap vs Telegram. No need to copy-paste wallet addresses or leave the chat." },
       { icon: "🔒", title: "IPFS message storage", desc: "Messages stored on IPFS and user devices rather than centralised servers. No single point of control or censorship, which matters to crypto communities that have been deplatformed before." },
@@ -500,21 +500,26 @@ Be direct, reference specific data, challenge assumptions. Always ground the Ter
       { icon: "🏦", title: "Multi-chain staking", desc: "Staking integration with LidoFi and in-app reward distribution. Combines communication and yield in one interface, which is relevant to DeFi-native users." },
     ],
     risks: [
-      "No identified team: The pitch deck does not name a single team member, founder, or technical lead. This is a fundamental gap — there is no way to assess execution capability.",
-      "Telegram already dominates: Telegram has 900M+ users, deep crypto-native penetration, a bot ecosystem, and has been adding Web3 features (Telegram Wallet, TON integration). The switching cost argument is thin.",
-      "Token sale funding model: The deck allocates 17% to tokensale and positions a Q2 2026 public token sale as a near-term milestone. This suggests the business model relies heavily on token sale proceeds rather than earned revenue.",
-      "No traction or product evidence: No user numbers, no pilot partners, no beta waitlist size, no GitHub, no product screenshots beyond diagrams. The deck is entirely pre-product.",
-      "Thin differentiation: XMTP, Status, Element, and Waku are all building decentralised messaging with far larger teams, more funding, and more technical rigour. The deck does not address why Texochat wins.",
+      "TXO token at zero: The original TXO token issued in the 2019 ICO now trades at effectively nothing. Any in-app economy dependent on token value is structurally broken. The pitch is asking for fresh capital to restart a project whose token already failed.",
+      "No verifiable traction after 7 years: Founded 2018, ICO 2019, app launch planned 2020. Six years later there are no publicly verifiable DAU/MAU figures, on-chain transaction volumes, or named customer references.",
+      "Team is marketing-led, not engineering-led: The CEO comes from a crypto marketing background (AMAZIX). Initial development was outsourced to a contract firm. No disclosed CTO with deep engineering credentials for a consumer app at scale.",
+      "Telegram already dominates with native Web3 features: Telegram has 950M+ MAU with a native TON wallet, TON-native token transfers, and a bot ecosystem. The pitch does not explain why crypto users would switch.",
+      "This is a re-pitch of a failed project: The 2025/26 deck features a new roadmap and updated Web3 features (IPFS, NFTs), but the underlying company and token have already had one failed cycle. History of non-delivery matters.",
       "Regulatory risk on in-chat asset transfers: Enabling token transfers within a messaging app creates MSB (money services business) licensing requirements in most jurisdictions — not addressed in the deck.",
     ],
     team: [
-      { name: "Unknown", role: "Undisclosed", bg: "No team members named in the pitch deck. The only contact information provided is admin@texochat.com and a Telegram/X handle (@chat_texo). This is a significant red flag for a seed-stage investment evaluation." },
+      { name: "Akhilesh Mishra", role: "CEO & Founder", bg: "Commerce graduate (BJ Vanijya Mahavidyalaya). Crypto community operator and marketer. Head of Operations at AMAZIX (blockchain marketing advisory firm). Founded cryptocreed.com. No prior software exits or engineering credentials disclosed." },
+      { name: "Ankit Mishra", role: "Co-Founder", bg: "Civil engineering background. Limited public profile. No disclosed prior product-scaling or venture experience." },
+      { name: "Sabby Singh", role: "Developer", bg: "Core developer. Initial build was outsourced to Antier Solutions (contract blockchain dev shop, Chandigarh, India) per the 2019 whitepaper — early tech was not built entirely in-house." },
     ],
-    advisors: [],
+    advisors: [
+      "Development partner (2019): Antier Solutions — contract blockchain development firm, Chandigarh, India",
+      "No named advisors or institutional investors in ICO documentation",
+    ],
     report: [
       {
-        label: "What Texochat is (and isn't)",
-        body: "Texochat is positioning itself as a privacy-first, Web3-native messaging platform. The core claim: traditional messaging apps are broken for crypto users because they don't support asset transfers, they store data on centralised servers, and they can censor or ban communities. Texochat proposes: messages on IPFS + user devices (no central storage), in-chat token and NFT transfers, multi-chain staking within the app, and an embeddable widget for crypto project communities. The widget model is the most interesting distribution angle — rather than competing for direct messaging installs against Telegram, it gives crypto projects a tool to embed community chat on their own domains without requiring users to download anything. Whether that's a strong enough wedge to build from is the central question."
+        label: "What Texochat is — and what research reveals",
+        body: "The pitch deck presents Texochat as a new startup building a Web3 messaging platform. Research reveals a different picture: Texochat was founded in 2018, conducted a public ICO in August 2019 (TXO token, ERC-20 on Ethereum), planned a live app launch for 2020, and now appears to be re-pitching with updated features (IPFS storage, NFT transfers, embeddable widgets). The TXO token now trades at effectively zero. There is no publicly verifiable user base, no active trading volume, and no evidence the 2020 launch achieved meaningful scale. ICObench rated it 4.2/5.0 at ICO time, reflecting concept merit at that moment — not current execution. The 2025/26 deck's Q2 2026 public token sale is structurally a second attempt to raise capital from a project that did not deliver on its first cycle."
       },
       {
         label: "The Telegram problem",
@@ -535,7 +540,7 @@ Be direct, reference specific data, challenge assumptions. Always ground the Ter
     ],
     reportVerdict: {
       value: "Pass",
-      sub: "Texochat identifies a real problem but offers no evidence of the team, product, or differentiation needed to solve it. The deck is thinner than any other in this group, and the unnamed team is a disqualifying factor for a seed-stage evaluation. Re-evaluate if the team identifies itself and a working product is demonstrated."
+      sub: "Texochat is a 2018 ICO-era project whose token trades at zero, whose app failed to gain traction after a 2020 launch target, and whose team has a marketing rather than engineering background. The pitch is a second fundraise dressed as a first one. The concept is sound; the execution history is not. Return with verifiable DAU, on-chain transaction volume, and a credible explanation for why the re-launch succeeds where the original failed."
     },
     somnia: "Decentralised messaging requires exactly the infrastructure profile Somnia provides: high transaction throughput (every message sent is an on-chain event), sub-cent transaction fees (users cannot pay $0.10 per message to chat), and EVM compatibility for token transfer smart contracts. If Texochat builds a functioning product, Somnia would be a natural home for it — the product is fundamentally unviable on high-gas chains and ideally suited to Somnia's architecture. The Somnia fit is high in theory; the execution risk makes it conditional.",
     somniaLabel: "Medium-High",
@@ -545,11 +550,11 @@ Be direct, reference specific data, challenge assumptions. Always ground the Ter
       "In-chat token and NFT transfers require fast, cheap on-chain settlement",
       "EVM-compatible deployment means existing Solidity payment contracts are portable",
     ],
-    systemPrompt: `You are a senior venture analyst. Deep dive complete on Texochat — Web3 decentralised messaging platform.
+    systemPrompt: `You are a senior venture analyst. Deep dive complete on Texochat — ICO-era Web3 messaging app attempting a relaunch.
 
-KEY FACTS: Pre-launch, seeking seed. No named team members in deck — critical red flag. Product: messaging app with IPFS message storage, in-chat token and NFT transfers, embeddable widget for crypto project websites, multi-chain staking with LidoFi integration. Revenue: transaction fees + service fees + B2B widget. Token: 50% platform, 17% team/reserve, 13% tokensale, 14% partner — Q2 2026 public token sale planned. Market: 560M crypto owners globally, 10M active crypto messaging users/month. Timeline: Q1 2026 testnet beta, Q2 2026 public sale. Competition: Telegram (dominates crypto messaging, 900M+ MAU), XMTP, Status, Element — all unaddressed in deck. Somnia fit: HIGH in theory — messaging on blockchain requires high TPS and sub-cent fees. Analyst verdict: Pass — no team, no product, no differentiation case made.
+KEY FACTS: Founded 2018, Anand, Gujarat, India. ICO: August 2019. Token: TXO (ERC-20 on Ethereum) — now trades at ~$0.00. App launch planned 2020 — never achieved verifiable scale. Team: Akhilesh Mishra (CEO, commerce graduate, AMAZIX marketing background), Ankit Mishra (co-founder, civil engineering), Sabby Singh (developer — initial build outsourced to Antier Solutions). No institutional VC backing — ICO-funded only. Current pitch (2025/26 deck): updated features — IPFS message storage, in-chat NFT transfers, embeddable widget, multi-chain staking (LidoFi), reward system. Token distribution: 50% platform, 17% team/reserve, 13% tokensale, 14% partner. Q2 2026 public token sale planned. Competition: Telegram (950M MAU, native TON wallet), Status, Crypviser, XMTP. Analyst verdict: PASS — ICO-era project with token at zero, no verifiable traction, marketing-led team, re-pitch of a failed first cycle.
 
-Be direct, honest about gaps. The unnamed team is the primary red flag to address.`
+Be direct, honest about the historical context. The TXO token collapse and 7-year non-delivery are the primary issues to address.`
   }
 };
 
@@ -652,11 +657,11 @@ const SUGGESTED = {
     "What's the path from $300M to $5B TVL — which partners are most critical?"
   ],
   texochat: [
-    "Why would any crypto community switch from Telegram to Texochat?",
-    "What would a credible team look like for a product like this?",
-    "How does the B2B widget model compare to Telegram's existing bot ecosystem?",
-    "At what point does this become worth re-evaluating?",
-    "What are the MSB licensing requirements for in-chat token transfers?"
+    "The TXO token from your 2019 ICO now trades at zero — what specifically failed the first time and why is this relaunch different?",
+    "The app was supposed to launch in 2020. Walk me through what actually happened between 2020 and 2026.",
+    "Telegram has 950M users with a native crypto wallet and TON integration. What specific need does Texochat serve that a Telegram user with a TON wallet cannot satisfy today?",
+    "Can you share any on-chain transaction volume data for TXO from the past 12 months?",
+    "At what point does this become worth re-evaluating — what milestones would change the PASS verdict?"
   ]
 };
 
