@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 const VENTURES = {
   inframarkets: {
@@ -601,9 +602,23 @@ function ChatMsg({ msg }) {
         background: u ? "#eff6ff" : "#f9fafb",
         color: u ? "#1d4ed8" : "#111827",
         border: u ? "0.5px solid #bfdbfe" : "0.5px solid #e5e7eb",
-        whiteSpace: "pre-wrap"
       }}>
-        {msg.content}
+        {u ? msg.content : (
+          <ReactMarkdown components={{
+            p: ({children}) => <p style={{ margin: "0 0 8px", lineHeight: 1.7 }}>{children}</p>,
+            strong: ({children}) => <strong style={{ fontWeight: 600, color: "#111827" }}>{children}</strong>,
+            h1: ({children}) => <h1 style={{ fontSize: 15, fontWeight: 600, margin: "10px 0 6px", color: "#111827" }}>{children}</h1>,
+            h2: ({children}) => <h2 style={{ fontSize: 14, fontWeight: 600, margin: "10px 0 6px", color: "#111827" }}>{children}</h2>,
+            h3: ({children}) => <h3 style={{ fontSize: 13, fontWeight: 600, margin: "8px 0 4px", color: "#111827" }}>{children}</h3>,
+            ul: ({children}) => <ul style={{ margin: "4px 0 8px", paddingLeft: 18 }}>{children}</ul>,
+            ol: ({children}) => <ol style={{ margin: "4px 0 8px", paddingLeft: 18 }}>{children}</ol>,
+            li: ({children}) => <li style={{ marginBottom: 3, lineHeight: 1.6 }}>{children}</li>,
+            code: ({children}) => <code style={{ background: "#e5e7eb", padding: "1px 5px", borderRadius: 4, fontSize: 12, fontFamily: "monospace" }}>{children}</code>,
+            blockquote: ({children}) => <blockquote style={{ borderLeft: "3px solid #e5e7eb", margin: "6px 0", paddingLeft: 10, color: "#6b7280" }}>{children}</blockquote>,
+          }}>
+            {msg.content}
+          </ReactMarkdown>
+        )}
       </div>
     </div>
   );
