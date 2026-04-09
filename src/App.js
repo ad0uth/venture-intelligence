@@ -14,6 +14,7 @@ const VENTURES = {
     verdict: "STRONG INVEST",
     tagline: "The missing financial primitive for the AI & energy supercycle.",
     description: "Institutional-grade event contracts on energy assets — bringing prediction market mechanics to a $1T+ annual energy futures market that current platforms can't touch.",
+    simpleExplainer: "Inframarkets is a trading platform for energy prices. Instead of buying expensive futures contracts like large banks do, anyone in the world can bet on whether European gas or oil prices will go up or down in the next five minutes, with no minimum bet size and no broker required. The platform settles bets automatically using real price data from official energy exchanges, so there is no human deciding who wins. It sits at the intersection of two trends: the explosion of betting markets online, and the surging volatility in energy prices driven by AI data centers and the shift to renewables.",
     metrics: [
       { label: "Raise", value: "$3M seed" },
       { label: "Valuation", value: "$15M post" },
@@ -66,6 +67,14 @@ const VENTURES = {
         body: "This is what separates Inframarkets from Tide most sharply. Tide's deck is completely silent on the liquidity bootstrapping problem. Inframarkets has a three-phase plan: Phase 0 (3–12 months post-launch): 0% taker/maker fees, -0.1% rebates for market makers up to $10M/month volume, points programme. Phase 1: deploy own capital to guarantee order execution plus dedicated MMs for specific markets. Phase 2: transition to professional MMs only across all markets. This is a coherent, battle-tested approach used by every successful derivatives exchange. The fact that they've thought through the chicken-and-egg problem and have a capital allocation strategy for it — even with $3M seed — is a meaningful signal of operational maturity."
       },
       {
+        label: "Macro tailwinds: why energy prediction markets now",
+        body: "The deck's 'Physics at a Tipping Point' framing is directionally correct. Three structural forces are converging. First, AI data center buildout is creating unprecedented electricity demand volatility — grid operators are dealing with swings they haven't seen before, and that volatility has real economic value. Second, the renewable energy transition creates inherent intermittency: solar and wind output is weather-dependent, making intraday price spikes more frequent. EPEX Spot traded $78B in 2025, up 38% in two years — this is real volume growth, not narrative. Third, the broader prediction market category proved product-market fit in 2025 by clearing $5B+ per week in notional volume. The timing argument for energy-specific markets is strong: the underlying asset class has become more volatile exactly as the infrastructure to trade volatility cheaply has matured."
+      },
+      {
+        label: "Oracle and data risk: what could break the model",
+        body: "The Machine Truth claim is only as good as the data behind it. Inframarkets' oracle relies on EPEX Spot for European power prices and EIA reports for US energy data. Three failure modes exist. First, data latency: EPEX Spot data feeds have service-level commitments but not zero-latency guarantees — a 5-minute contract resolving on a delayed feed could create incorrect settlements at scale. Second, data access risk: the deck does not disclose whether formal commercial agreements are in place with EPEX and EIA, or whether they're parsing publicly available feeds. Access to EIA is public, but real-time EPEX Spot data requires paid API agreements. Third, data revision risk: energy price reports are sometimes revised after initial publication. The oracle architecture must handle revision scenarios without retroactively invalidating settled markets. None of these are fatal, but they need to be confirmed in diligence."
+      },
+      {
         label: "Key diligence questions",
         body: "1. What is the smart contract audit status and who is auditing? With an April 28 launch date this is the most time-sensitive question. 2. Are there any institutional trading desk conversations already underway — even informal — that validate the energy sector demand? 3. How exactly does Lorenzo's GTM reach commodity traders who aren't already crypto-native? The personas listed (crypto traders, commodity traders, macro traders, gamblers) span very different acquisition channels. 4. What data provider agreements are formally in place with EPEX Spot and EIA? 5. What is the granular breakdown of how the ~$1M available for liquidity (35% of $3M) will be deployed across which markets in the first six months?"
       },
@@ -74,7 +83,7 @@ const VENTURES = {
       value: "Strong invest case",
       sub: "Most rigorous pitch in the portfolio. Real problem, technically credible solution, clean revenue model, actual liquidity plan, best sector-credentialed advisory team. The risk/reward is compelling at $3M seed / $15M post. Gate: audit status, data provider agreements, evidence of institutional demand conversations."
     },
-    somnia: "Cross-chain compatibility is already on Inframarkets' post-launch roadmap, suggesting they're chain-agnostic by design. High-frequency energy contract settlement — intraday TTF gas contracts update every 5 minutes, generating constant on-chain position tracking, margin calls and settlement events. Somnia's EVM-compatible architecture means an Inframarkets deployment wouldn't require a full rewrite of oracle or settlement logic. Slightly lower fit than Tide/OnePlayr because institutional traders are less sensitive to gas costs than retail consumers — but a meaningful integration opportunity, particularly as Inframarkets expands to retail participation.",
+    somnia: "Cross-chain compatibility is already on Inframarkets' post-launch roadmap, suggesting they're chain-agnostic by design. High-frequency energy contract settlement — intraday TTF gas contracts update every 5 minutes, generating constant on-chain position tracking, margin calls and settlement events. Somnia's EVM-compatible architecture means an Inframarkets deployment wouldn't require a full rewrite of oracle or settlement logic. Slightly lower fit than Tide because institutional traders are less sensitive to gas costs than retail consumers — but a meaningful integration opportunity, particularly as Inframarkets expands to retail participation.",
     somniaLabel: "Medium-High",
     somniaPoints: [
       "1M+ TPS handles continuous 5-minute energy market settlement events without bottleneck",
@@ -102,6 +111,7 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
     verdict: "WATCH CLOSELY",
     tagline: "Make Precision Pay.",
     description: "Scalar/continuum prediction markets — bet on the number, not just yes or no. Binary markets force two outcomes; Tide creates 50 tradeable positions per event, each with its own mispricing opportunity.",
+    simpleExplainer: "Most betting and prediction platforms force you to pick between two options: yes or no, up or down. Tide lets you bet on the exact number. Instead of just predicting whether Bitcoin will go up, you can bet it lands between $85,000 and $90,000 at a specific time, with each price range having its own odds and payout. This creates far more ways to win on a single event, and rewards people who have genuine insight rather than just a directional hunch. The product is built on blockchain so it operates without a central company controlling which bets are allowed, and currently targets the same crypto-native audience that has driven platforms like Polymarket to multi-billion valuations.",
     metrics: [
       { label: "SAM", value: "$155B on-chain" },
       { label: "TAM", value: "$1.5T" },
@@ -125,9 +135,9 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
       "Polymarket could add scalar markets as a feature. What is the durable moat if the category leader copies the instrument?",
     ],
     team: [
-      { name: "Jo Lim", role: "Product Lead", bg: "DeFi native → operator. Designed DeFi & AI products that raised $10M+. HL KBW 2025 winner." },
-      { name: "Othniel Naga", role: "CTO", bg: "Founder/CTO of VTF & TONCASH. Full-stack Web3, risk/infra specialist. HL KBW 2025 winner." },
-      { name: "Joshua Ong", role: "Narrative & Community", bg: "Narrative research & community operator. SNS ambassador. HL KBW 2025 winner." },
+      { name: "Jo Lim", role: "Product Lead", bg: "DeFi native turned operator. Designed DeFi and AI products that raised $10M+. Hyperliquid KBW 2025 winner." },
+      { name: "Othniel Naga", role: "CTO", bg: "Founder/CTO of VTF and TONCASH. Full-stack Web3, risk and infra specialist. Hyperliquid KBW 2025 winner." },
+      { name: "Joshua Ong", role: "Narrative & Community", bg: "Narrative research and community operator. SNS ambassador. Hyperliquid KBW 2025 winner." },
     ],
     advisors: [
       "Previous ventures raised ~$20M from DeFiance Capital, 500 Startups, Merit Circle, Ton Ventures, Blockchain Founders Fund, LVT Capital",
@@ -149,7 +159,11 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
       },
       {
         label: "Platform independence — a key structural advantage",
-        body: "Unlike Kash (which was dropped from this shortlist), Tide doesn't depend on any social platform's API policy. This is more significant than it sounds. X has restricted financial bots before. TikTok has shut down creator monetisation tools without notice. Kash's entire distribution model lived and died on platform permission. Tide is a standalone protocol — permissionless, self-hosted, owned infrastructure. This structural independence is a real moat that compounds over time as regulatory pressure on financial activities within social platforms increases."
+        body: "Unlike Kash (which was dropped from the shortlist), Tide doesn't depend on any social platform's API policy. This is more significant than it sounds. X has restricted financial bots before. TikTok has shut down creator monetisation tools without notice. Kash's entire distribution model lived and died on platform permission. Tide is a standalone protocol — permissionless, self-hosted, owned infrastructure. This structural independence is a real moat that compounds over time as regulatory pressure on financial activities within social platforms increases."
+      },
+      {
+        label: "CLMSR pricing mechanism: how scalar markets stay liquid",
+        body: "Tide uses a Continuous Logarithmic Market Scoring Rule (CLMSR) as their automated market maker — a cost-function AMM that always provides quotes across every tick without requiring matched counterparties. The key insight: instead of needing a buyer for every seller at a specific price, the AMM provides continuous two-sided liquidity across all outcomes simultaneously. The formula C(q) = a * log(sum of exp(qi/a)) ensures probabilities always sum to 1 and costs are path-independent. In practice, this means Tide can launch a market and it will have tradeable quotes immediately, without needing to seed traditional order book depth. The tradeoff: the AMM takes on market risk (specifically, the risk of resolving near the consensus price where most capital is concentrated). How Tide capitalises the AMM and manages this risk is a critical diligence question."
       },
       {
         label: "Key diligence questions",
@@ -158,9 +172,9 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
     ],
     reportVerdict: {
       value: "Watch closely",
-      sub: "Most intellectually compelling product of the three. Strongest Somnia fit. Genuine structural independence. The gap from Inframarkets in conviction terms is almost entirely one thing: Tide needs to present a credible liquidity plan. If they can — even a rough Phase 0 equivalent of Inframarkets' plan — the verdict moves to Strong Invest."
+      sub: "Most intellectually compelling product of the group. Strongest Somnia fit. Genuine structural independence. The gap from Inframarkets in conviction terms is almost entirely one thing: Tide needs to present a credible liquidity plan. If they can — even a rough Phase 0 equivalent — the verdict moves to Strong Invest."
     },
-    somnia: "Tide has the strongest Somnia fit of all three ventures. Scalar markets generate more on-chain transactions per event than binary ones — every position adjustment, every partial close, every point on the curve being traded generates an on-chain operation. On a high-gas chain, repositioning a Bitcoin price bet costs $8+ in gas fees. On Somnia's 1M+ TPS, sub-cent transaction architecture, continuous position updates become economically viable. There is a serious argument that Tide should be Somnia-native from day one: the product is genuinely constrained by gas costs on existing chains in a way that the institutional traders of Inframarkets are not.",
+    somnia: "Tide has the strongest Somnia fit of all ventures. Scalar markets generate more on-chain transactions per event than binary ones — every position adjustment, every partial close, every point on the curve being traded generates an on-chain operation. On a high-gas chain, repositioning a Bitcoin price bet costs $8+ in gas fees. On Somnia's 1M+ TPS, sub-cent transaction architecture, continuous position updates become economically viable. There is a serious argument that Tide should be Somnia-native from day one: the product is genuinely constrained by gas costs on existing chains in a way that institutional traders are not.",
     somniaLabel: "Very High",
     somniaPoints: [
       "Continuous scalar position updates across 50 outcome points become economically viable at sub-cent gas",
@@ -171,7 +185,7 @@ Be direct, analytical, rigorous. Challenge assumptions. Reference specific data.
     ],
     systemPrompt: `You are a senior venture analyst. Deep dive complete on Tide — scalar/continuum prediction market protocol.
 
-KEY FACTS: Pre-launch, pre-revenue. "Make Precision Pay." Core insight: binary markets flatten edge. Scalar bets on real numbers: price, funding, TVL, OI, spread, on-chain KPIs. TAM $1.5T, SAM $155B on-chain. Comparables: Polymarket $1B→$8B+; Kalshi $2B→$11B in months of 2025. Roadmap: Q2 2026 public launch. Team: Jo Lim, Othniel Naga, Joshua Ong. Multi-ETHGlobal + Hyperliquid 2025 hackathon winners. ~$20M raised across prior ventures. CRITICAL GAP: NO liquidity bootstrapping plan in deck. STRUCTURAL ADVANTAGE: standalone protocol, platform independent, no X/TikTok API dependency risk. Somnia fit: VERY HIGH — scalar markets require constant position updates, economically broken on high-gas chains. Analyst verdict: Watch closely — compelling scalar insight, strongest Somnia fit, but liquidity bootstrapping is existential and must be answered before investing.
+KEY FACTS: Pre-launch, pre-revenue. "Make Precision Pay." Core insight: binary markets flatten edge. Scalar bets on real numbers: price, funding, TVL, OI, spread, on-chain KPIs. TAM $1.5T, SAM $155B on-chain. Comparables: Polymarket $1B→$8B+; Kalshi $2B→$11B in months of 2025. Roadmap: Q2 2026 public launch. Team: Jo Lim, Othniel Naga, Joshua Ong. Multi-ETHGlobal + Hyperliquid 2025 hackathon winners. ~$20M raised across prior ventures. CRITICAL GAP: NO liquidity bootstrapping plan in deck. Pricing: CLMSR (Continuous Log Market Scoring Rule) — always-on AMM quotes across all outcome ticks, path-independent cost. STRUCTURAL ADVANTAGE: standalone protocol, platform independent, no X/TikTok API dependency risk. Somnia fit: VERY HIGH — scalar markets require constant position updates, economically broken on high-gas chains. Analyst verdict: Watch closely — compelling scalar insight, strongest Somnia fit, but liquidity bootstrapping is existential and must be answered before investing.
 
 Be direct, reference specific data, challenge assumptions.`
   },
@@ -189,6 +203,7 @@ Be direct, reference specific data, challenge assumptions.`
     verdict: "WATCH CLOSELY",
     tagline: "If it's trending - it's tradable.",
     description: "Kash is a white-label prediction market platform that embeds directly into social media feeds via an AI-powered bot. Social media brands and KOLs deploy branded prediction markets to their audiences on X in 48 hours, sharing trading revenue with Kash.",
+    simpleExplainer: "Kash lets social media accounts turn their followers into a betting market. A sports channel, crypto influencer, or entertainment brand signs up to Kash and gets a custom prediction bot that runs inside their existing X (Twitter) feed. When they post about a topic, their followers can reply to place bets on the outcome — no app download, no account creation required. The brand keeps a cut of every bet placed, and Kash handles the technology, payouts, and compliance in the background. Think of it as giving any social media audience their own sports book, with Kash acting as the white-label infrastructure provider.",
     metrics: [
       { label: "Pre-Seed Raise", value: "$2M" },
       { label: "Market Volume (2025)", value: "$44B industry" },
@@ -241,12 +256,12 @@ Be direct, reference specific data, challenge assumptions.`
         body: "Kash occupies a white space neither Polymarket nor Kalshi fills — the B2B white-label layer. Polymarket curates markets slowly and has no partner program; Kalshi requires CFTC approval for each market and takes weeks to months per launch. Kash creates markets in seconds, is permissionless, and deploys under the partner's brand. The risk: this white space is only defensible while the incumbents focus on their own consumer brands. Polymarket (backed by $2B from ICE) could replicate the B2B model with one product decision."
       },
       {
-        label: "Critical Gaps",
-        body: "Three flags stand above the rest. The team disclaimer is unusually candid: key hires are not yet formally employed, meaning the company that closes this round may look different from what is presented. Platform dependency on X's API is existential — X could terminate bot functionality without warning or build prediction market features natively. The AI oracle, while technically elegant, has not been stress-tested at scale; a prominent wrong resolution call would damage community trust in a product built entirely on that trust."
+        label: "zkTLS technology: what it is and why it matters",
+        body: "Kash resolves markets using zkTLS (zero-knowledge Transport Layer Security), implemented via Reclaim Protocol. In plain terms: when a market needs to resolve against real-world data (did a team win, did a price hit a target), zkTLS generates a cryptographic proof that a specific piece of data was retrieved from a specific website at a specific time, without revealing the full response or relying on a trusted intermediary. This is materially different from Polymarket's UMA oracle (which uses human voters) or Inframarkets' approach (direct authoritative data feeds). The advantage is speed and permissionlessness — any publicly available web data can become an oracle without negotiating data provider agreements. The risk is that zkTLS proofs can be gamed if the underlying website data is itself manipulated or if the proof generation is compromised."
       },
       {
-        label: "Market Opportunity",
-        body: "Prediction market trading volume hit $44-63 billion in 2025 and is tracking toward $100+ billion in 2026. Polymarket and Kalshi hold 97.5% of current volume — Kash frames this as proof of demand rather than a competitive barrier. The real market Kash is targeting is adjacent: the hundreds of millions of social media users who form opinionated communities around sports, crypto, and entertainment but currently have no financial stake in their predictions."
+        label: "Critical Gaps",
+        body: "Three flags stand above the rest. The team disclaimer is unusually candid: key hires are not yet formally employed, meaning the company that closes this round may look different from what is presented. Platform dependency on X's API is existential — X could terminate bot functionality without warning or build prediction market features natively. The AI oracle, while technically elegant, has not been stress-tested at scale; a prominent wrong resolution call would damage community trust in a product built entirely on that trust."
       },
       {
         label: "Key Diligence Questions",
@@ -268,9 +283,273 @@ Be direct, reference specific data, challenge assumptions.`
     ],
     systemPrompt: `You are a senior venture analyst. Deep dive complete on Kash - a white-label social-native prediction market platform built on Base, targeting social media brands and KOLs as B2B customers.
 
-KEY FACTS: Raised $2M pre-seed in February 2026. Backers include Coinbase Ventures, Animoca Brands, Spartan Group, Sui Foundation, Moonrock Capital, Big Brain Holdings. Founded by Lucas Martin Calderon (blockchain security for govts/tier-1 banks, crypto HFT background, built Bonding Curve AMM from scratch). CRITICAL: Deck disclaimer states team members are undergoing recruitment and NOT YET formally employed - founding team composition post-funding is uncertain. Product runs inside X (Twitter) via @kash_bot - users predict by replying to posts with no app or wallet required. White-label model: partners pay $3K/month (12-month) or $5K/month (6-month) plus 30% revenue share on trading fees. Partners get branded bot deployed in 48 hours. Markets resolved via AI + zkTLS (Reclaim Protocol) zero-knowledge proofs - permissionless and self-custodial. Flash markets as short as 15 minutes. Leverage and passive USDC yield built into protocol. Live partnership: Doppel Games (March 2026) - official prediction market for AI agent battles on X. Product in pre-testnet simulation phase - not yet at scale with paying partners. Industry: $44-63B prediction market volume in 2025; Polymarket ($9B) and Kalshi ($11B) hold 97.5% of market. No regulatory licenses or clearances secured. Kash is a ZeroID Group subsidiary.
+KEY FACTS: Raised $2M pre-seed in February 2026. Backers include Coinbase Ventures, Animoca Brands, Spartan Group, Sui Foundation, Moonrock Capital, Big Brain Holdings. Founded by Lucas Martin Calderon (blockchain security for govts/tier-1 banks, crypto HFT background, built Bonding Curve AMM from scratch). CRITICAL: Deck disclaimer states team members are undergoing recruitment and NOT YET formally employed - founding team composition post-funding is uncertain. Product runs inside X (Twitter) via @kash_bot - users predict by replying to posts with no app or wallet required. White-label model: partners pay $3K/month (12-month) or $5K/month (6-month) plus 30% revenue share on trading fees. Partners get branded bot deployed in 48 hours. Markets resolved via AI + zkTLS (Reclaim Protocol) zero-knowledge proofs - permissionless and self-custodial. Flash markets as short as 15 minutes. Leverage and passive USDC yield built into protocol. Live partnership: Doppel Games (March 2026) - official prediction market for AI agent battles on X. Industry: $44-63B prediction market volume in 2025; Polymarket ($9B) and Kalshi ($11B) hold 97.5% of market. No regulatory licenses or clearances secured. Kash is a ZeroID Group subsidiary.
 
 Be direct, reference specific data, challenge assumptions, and flag the team-not-yet-hired issue when relevant.`
+  },
+
+  "eagle-ai": {
+    id: "eagle-ai",
+    name: "Eagle AI",
+    color: "#3b82f6",
+    colorDim: "#3b82f620",
+    colorBorder: "#3b82f640",
+    sector: "AI Inference Acceleration",
+    stage: "Seed · Pre-commercial",
+    valuation: "Undisclosed",
+    score: 72,
+    verdict: "WATCH CLOSELY",
+    tagline: "The speed layer of AI.",
+    description: "Eagle AI has built the world's fastest speculative decoding engine for large language models — achieving 5x latency reduction with no accuracy tradeoff. Already embedded in products from NVIDIA, Meta, AWS, Perplexity and DeepSeek.",
+    simpleExplainer: "Eagle AI has built software that makes AI chatbots significantly faster without any loss in quality. When an AI like ChatGPT or Claude generates a response, it creates each word one at a time, which is slow and expensive at scale. Eagle's algorithm predicts multiple words ahead simultaneously, achieving up to five times the speed. The technology is already running inside products from NVIDIA, Meta, AWS, Perplexity, and DeepSeek — processing billions of AI requests per day. Eagle is now turning this into a commercial business by launching a companion chip ($13,999) that any AI company can plug into their existing GPU servers, and a cloud inference network built on top of it.",
+    metrics: [
+      { label: "Speedup", value: "5x vs vanilla" },
+      { label: "HF Downloads (1 model)", value: "104K/month" },
+      { label: "Chip cost", value: "$13,999" },
+      { label: "Chip throughput", value: "640 tokens/sec" },
+      { label: "Chip payback", value: "~1.5 months" },
+      { label: "Key users", value: "NVIDIA, Meta, AWS" },
+    ],
+    scores: { "Traction": [20,25], "Market": [16,20], "Biz model": [12,20], "Team": [14,15], "Somnia": [3,10], "Upside": [7,10] },
+    highlights: [
+      { icon: "🚀", title: "Proven at production scale", desc: "NVIDIA uses Eagle for 1,000 TPS/user on Blackwell. Meta embedded it in Llama-4 Maverick. DeepSeek V3 uses Eagle-style multi-token prediction. This isn't a demo — it's billions of daily calls." },
+      { icon: "🔬", title: "Research-born moat", desc: "EAGLE-1 was peer-reviewed at ICML '24, EAGLE-2 at EMNLP '24, EAGLE-3 at NeurIPS '25. Each version improved on the last. The algorithm is academically defensible, not just engineered." },
+      { icon: "💡", title: "EAGLE Chip economics", desc: "$13,999 chip powers a full 8-GPU node, achieves 640 tokens/sec (vs Groq LPU at 560 tokens/sec for $11.4M). Pays for itself in ~48 days. Hardware that actually makes financial sense." },
+      { icon: "🤝", title: "NVIDIA + AMD partnerships", desc: "Day-0 EAGLE-4 support on all CUDA platforms via NVIDIA. AMD partnership for chip launch and sales rollout. These are not vague MoUs — they're technical co-development commitments." },
+    ],
+    risks: [
+      "Open-source to commercial transition risk: Eagle was built as open-source research. Moving to a closed-source chip and paid cloud service requires a fundamentally different business motion — developer trust may erode if the community feels abandoned.",
+      "Hardware is hard: Chip design, manufacturing, and distribution is capital-intensive and operationally complex. The $13,999 chip prototype must survive supply chain, yield, and reliability challenges before revenue scales.",
+      "Algorithm commoditisation: Speculative decoding is increasingly understood by the industry. Meta, Google, and OpenAI all have internal inference acceleration teams. Eagle's lead could narrow as competitors invest.",
+      "No Somnia/blockchain fit: Eagle AI operates entirely outside the crypto ecosystem. Investment from a blockchain L1 perspective carries strategic misalignment — the commercial upside exists but not as a Somnia ecosystem play.",
+      "Revenue not yet proven: Despite billions of production calls, Eagle has not commercialised at scale. The transition from free open-source to paid chip/cloud is the key unvalidated step.",
+      "Single founder concentration: Dr. Hongyang Zhang is the primary researcher and public face. Academic founders sometimes struggle with commercial execution — the team of 16 has not been stress-tested on GTM.",
+    ],
+    team: [
+      { name: "Dr. Hongyang Zhang", role: "Co-Founder", bg: "Tenure-track Professor of AI, University of Waterloo. PhD in ML from Carnegie Mellon University, BSc from Peking University. Five 1st-place finishes at NeurIPS, CVPR, and Google competitions. Google Research Scholar Award. Amazon Research Award. World AI Conference Award (WAICO). Co-author of ZKLLM and ZKDL (fastest zk-AI systems in the world). Team of 16 experienced researchers and engineers." },
+    ],
+    advisors: [
+      "NVIDIA — Day-0 EAGLE-4 support on all CUDA platforms, training integration via TensorRT-LLM",
+      "AMD — chip launch partnership and sales rollout, Day-0 AMD software support",
+    ],
+    report: [
+      {
+        label: "What Eagle AI actually is",
+        body: "Eagle AI is best understood as a software-first inference acceleration company turning into a hardware company. The core product is EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) — a speculative decoding algorithm that predicts at the feature layer of a language model rather than the token layer. This architectural insight allows a smaller draft model to propose multiple tokens simultaneously, which the larger base model then validates in parallel rather than sequentially. The result: 3-5x latency reduction and 2x throughput improvement with no accuracy tradeoff. EAGLE-1 launched January 2024, EAGLE-2 in June 2024 (adding a dynamic draft tree), EAGLE-3 in March 2025 (adding training-time test and a new scaling law), all peer-reviewed at top ML conferences. EAGLE-4 is in development and described as a major innovation. This is not a startup running demos — it's a research programme with billions of production calls daily."
+      },
+      {
+        label: "The traction case: who actually uses this",
+        body: "The user list is remarkable for a sub-3-year-old research project. NVIDIA uses Eagle in their Blackwell chips to achieve 1,000 TPS/user — a publicly announced benchmark. AWS introduced Eagle acceleration support in their cloud inference infrastructure. Perplexity accelerates their flagship Sonar LLM with Eagle. Meta used Eagle in both Llama-4 Maverick and Llama-4 Scout inference, achieving their fastest-ever production speedup for large batch sizes (1.4-2.0x at production scale). DeepSeek V3 uses an Eagle-style multi-token prediction approach in their pre-training architecture. NVIDIA's humanoid robotics platform (Jetson Thor) delivers 3.5x faster inference using Eagle on the Qwen2.5-VL-7B model. One Eagle model for Llama3.1-8B alone receives 104,406 monthly downloads on HuggingFace, exceeding all of DeepSeek V3.1's downloads (93.2K). This is genuine, unprompted adoption by the biggest names in AI."
+      },
+      {
+        label: "The commercial pivot: chip and cloud",
+        body: "Eagle is transitioning from open-source research to commercial products. The EAGLE Chip ($13,999) connects to existing GPU nodes via RDMA over ethernet — one chip powers a full 8-GPU node. Specs: 640 tokens/sec/user (vs Groq LPU at 560 tokens/sec for $11.4M), 40% more acceleration on top of Eagle software gains, supports all NVIDIA and AMD GPUs with over-the-air model updates. The payback math is compelling: at batch size 64 on Llama-3 70B inference at $0.00026/request, the chip generates enough extra revenue to pay for itself in 48.5 days and pays off the entire $300K H100 node 12 months faster than without it. EAGLE Net is the inference network built on top — only served on GPUs with Eagle Chips attached, creating a supply moat. Roadmap: Q2 2026 private chip sale, Q3 2026 global public sale and cloud production launch."
+      },
+      {
+        label: "The competitive moat: why this is hard to replicate",
+        body: "Eagle's moat has three layers. First, academic credibility: the algorithm was published at ICML, EMNLP, and NeurIPS — venues where fraud is essentially impossible. Any competitor must engage with the underlying research, not just reverse-engineer the product. Second, the data flywheel: the more deployments Eagle has, the better the training data for the draft model, and the better EAGLE-4 and future versions will be. Third, the NVIDIA and AMD integration partnerships: Day-0 support on CUDA and ROCm platforms means every new chip generation ships with Eagle natively enabled — this is a significant distribution lock-in. The open-source heritage is also a moat in reverse: the community has built significant tooling on top of Eagle's HuggingFace models, creating switching costs for the 'thousands of AI builders' using it."
+      },
+      {
+        label: "Risk: the open-to-closed transition",
+        body: "Eagle's biggest strategic risk is the move from open-source to commercial. The developer community that adopted Eagle did so because it was free, academically rigorous, and community-supported. Closing the source code and charging for chips risks a fork: if the community creates an open-source equivalent (as happened with LLaMA and many other open-source AI projects), Eagle's commercial moat erodes. This transition is being managed carefully — Eagle software on GPU is still available, and the chip is presented as additive rather than a replacement. But the EAGLE Net, which only serves inference on Eagle Chip nodes, is a potential point of contention. How Eagle communicates and manages this transition will determine whether the community remains a distribution asset or becomes a competitive liability."
+      },
+      {
+        label: "Somnia fit and the blockchain question",
+        body: "Eagle AI is almost entirely disconnected from the blockchain ecosystem. The inference acceleration technology operates at the GPU hardware and software level — there is no on-chain component, no token, and no natural integration with EVM-compatible chains. The one theoretical connection is the emerging field of on-chain AI verification (where zkML and zkLLM proofs require fast inference), and notably Dr. Zhang is co-author of ZKLLM and ZKDL — suggesting the team has thought about this intersection. But as an investment from Somnia's perspective, Eagle AI is a general AI infrastructure bet with no near-term Somnia ecosystem synergies. The investment thesis stands or falls on the AI compute market alone."
+      },
+    ],
+    reportVerdict: {
+      value: "Watch closely",
+      sub: "Exceptional research pedigree, proven production adoption, and a compelling chip economics story. The Somnia fit is essentially zero — this is a pure AI infrastructure play. The key bet is whether Dr. Zhang's team can execute a hardware GTM motion that most academics fail at. Worth tracking closely for the next 6-12 months as chip sales begin."
+    },
+    somnia: "Eagle AI has no direct connection to the Somnia ecosystem. The technology operates at the GPU and server level — inference acceleration for large language models running on traditional computing infrastructure. The only speculative link is Eagle's involvement in zero-knowledge ML (Dr. Zhang co-authored ZKLLM and ZKDL, the fastest zk-AI systems) which could eventually intersect with on-chain AI verification on Somnia. But this is theoretical at best. Eagle AI should be evaluated purely as an AI infrastructure investment, not as a Somnia ecosystem play.",
+    somniaLabel: "Low",
+    somniaPoints: [
+      "No direct on-chain component — Eagle operates at GPU and server infrastructure level",
+      "Speculative connection: Dr. Zhang co-authored ZKLLM/ZKDL (fastest zk-AI) — on-chain AI verification is a possible future bridge",
+      "EVM compatibility is irrelevant to Eagle's core product",
+      "Investment value is independent of Somnia ecosystem growth",
+    ],
+    systemPrompt: `You are a senior venture analyst. Deep dive complete on Eagle AI — AI inference acceleration via speculative decoding.
+
+KEY FACTS: Eagle AI built EAGLE algorithm (speculative decoding that predicts at feature layer, not token level). Results: 5x latency speedup, 2x throughput, zero accuracy tradeoff. Versions: EAGLE-1 (Jan 2024, ICML '24, 3x speed), EAGLE-2 (Jun 2024, EMNLP '24, 4x, dynamic draft tree), EAGLE-3 (Mar 2025, NeurIPS '25, 5x, new scaling law), EAGLE-4 (coming). Users: NVIDIA (1,000 TPS/user on Blackwell), Meta (Llama-4 Maverick + Scout production inference), AWS (ND inference support), Perplexity (Sonar LLM), DeepSeek V3 (multi-token prediction inspired by EAGLE). HuggingFace: 104K monthly downloads for just one model (exceeds DeepSeek V3.1's 93.2K). Commercialising: EAGLE Chip ($13,999, 640 tokens/sec, 1 chip powers 8-GPU node, 48.5 day payback) and EAGLE Net (inference network, Eagle Chip only). Partners: NVIDIA (Day-0 CUDA support), AMD (chip launch + sales). Team: Dr. Hongyang Zhang (CMU PhD, tenure-track Waterloo, 5x NeurIPS/CVPR winner, Google Scholar Award) + 16 researchers/engineers. Roadmap: Q2 2026 chip private sale, Q3 2026 global public sale. Somnia fit: LOW — pure AI infrastructure play. Analyst verdict: Watch closely — exceptional traction, critical question is hardware GTM execution.
+
+Be direct, reference specific data, challenge assumptions.`
+  },
+
+  polaris: {
+    id: "polaris",
+    name: "Polaris Finance",
+    color: "#8b5cf6",
+    colorDim: "#8b5cf620",
+    colorBorder: "#8b5cf640",
+    sector: "DeFi / Yield Infrastructure",
+    stage: "Seed · $3M raise (SAFT)",
+    valuation: "TBD",
+    score: 57,
+    verdict: "HIGH POTENTIAL",
+    tagline: "The yield layer for Ethereum.",
+    description: "Polaris builds a self-sustaining yield infrastructure for Ethereum — a system where returns are generated from protocol activity itself (bonding curve fees, conversions) rather than from external investments or leverage, with no counterparty risk.",
+    simpleExplainer: "Polaris Finance is building a new kind of savings product for people who hold Ether, the cryptocurrency that powers the Ethereum network. The problem it solves: most crypto savings accounts today either pay low rates tied to traditional government bonds, or hide risks by betting on crypto prices through centralised exchanges. Polaris creates a system where the interest you earn comes from fees generated by people trading in and out of the product itself — similar to how a toll road earns money from traffic, not from external investments. The more people use Polaris, the more fees are generated, and the higher the yield, creating a self-reinforcing loop with no central company controlling your funds.",
+    metrics: [
+      { label: "Raise", value: "$3M SAFT" },
+      { label: "Chain", value: "Ethereum" },
+      { label: "Forecast APY (pUSD)", value: "8.5%+" },
+      { label: "Mainnet", value: "Q4 2026" },
+      { label: "Research", value: "18 months" },
+      { label: "Advisor", value: "Liquity Founder" },
+    ],
+    scores: { "Traction": [4,25], "Market": [15,20], "Biz model": [14,20], "Team": [12,15], "Somnia": [6,10], "Upside": [6,10] },
+    highlights: [
+      { icon: "🔄", title: "Endogenous yield — no external risk", desc: "Yield comes from bonding curve trading fees and conversion mechanics within the protocol itself, not from lending to centralised exchanges or buying T-bills. No counterparty, no off-chain exposure." },
+      { icon: "📈", title: "Scalable yield", desc: "Unlike RWA-backed stablecoins capped by T-bill rates (currently falling) or basis trade arb hitting its ceiling, Polaris yield scales with protocol adoption — more users = more fees = higher APY." },
+      { icon: "🏛️", title: "Ex-Liquity DNA", desc: "CTO Laurens Kessenich is an ex-Liquity developer. Liquity is one of the most technically respected DeFi protocols ever built. Robert Lauko (Liquity founder) is an advisor. This lineage carries real credibility." },
+      { icon: "⚖️", title: "Competitive rate at lower risk", desc: "Forecast 90d APY: pUSD 8.5%+ vs USDe at 4.75%, USDS at 4.19%, BOLD at 6.5%. Better rate with none of USDe's centralised exchange counterparty risk or USDS's T-bill ceiling." },
+    ],
+    risks: [
+      "Pre-launch with zero traction: 18 months of research and modelling, but no live product, no users, no audits. Everything is theoretical until Q4 2026 mainnet.",
+      "Stablecoin graveyard: The history of DeFi is littered with failed stablecoin projects. UST/LUNA (Terra) collapsed in 2022 with similar endogenous yield mechanics. The design must survive stress scenarios not captured in models.",
+      "Yield compression risk: If adoption stalls, fees fall, APY drops, users leave, fees fall further. The self-reinforcing loop works both ways. A confidence shock at any stage could cause a death spiral.",
+      "Ethereum-native concentration: 'The Yield Layer for Ethereum' is both a positioning strength and a constraint. Ethereum DeFi TVL is the prize, but it also locks Polaris into Ethereum ecosystem dynamics and competition.",
+      "Audit and security risk: Complex tokenomics involving bonding curves, pETH conversions, and vePOLAR vote-escrow mechanics create a large attack surface. A single smart contract exploit could be terminal.",
+      "Competitive density: Ethena (USDe), MakerDAO (USDS), Liquity (BOLD) all compete in the yield-bearing stablecoin space with established TVL, brand recognition, and community trust.",
+    ],
+    team: [
+      { name: "Robert Mullins", role: "CEO (Co-Founder)", bg: "7 years in crypto and VC. Previously at Jumper Exchange (cross-chain aggregator). Brings product and go-to-market experience in DeFi." },
+      { name: "Laurens Kessenich", role: "CTO (Co-Founder)", bg: "PhD in Physics from ETH Zurich. 7 years in crypto. DeFi founder. Ex-Liquity developer — direct experience building one of the most technically rigorous stablecoin protocols in existence." },
+      { name: "TokenBrice", role: "Growth (Co-Founder)", bg: "7 years in crypto. Contributor to DeFiScan, Liquity, and Paraswap. Deep DeFi community relationships. Running growth for multiple respected DeFi protocols." },
+    ],
+    advisors: [
+      "Robert Lauko — Liquity Founder (research advisor, one of the most respected stablecoin architects in DeFi)",
+      "Jim Maricondo — Ex-Consensys Japan Lead",
+      "Ex-Liquity development team — 15+ years stablecoin development experience across the broader team",
+    ],
+    report: [
+      {
+        label: "The core thesis: why DeFi yields have hit a ceiling",
+        body: "Polaris's pitch starts with a diagnosis that is directionally correct. The three dominant yield sources in DeFi stablecoins have all hit natural limits. Basis trade arbitrage (selling perpetual futures against spot to capture funding rate) generated 20%+ yields in 2024 but has compressed toward 4-5% as capital flooded the trade. Real-world asset backing (T-bills, treasuries) is capped by prevailing interest rates — currently falling as the Fed cuts. Endogenous yield from lending protocols (Aave, Compound) fluctuates with market conditions and has not scaled past single digits at meaningful TVL. The stablecoin market has grown to $180B+ in supply, but the yield problem gets harder to solve the larger it gets. Polaris is proposing a fourth source: yield generated by the protocol's own economic activity, independent of external rates or leverage."
+      },
+      {
+        label: "The mechanics: pETH, pUSD, and POLAR",
+        body: "Polaris operates as a three-asset system. pETH is minted by depositing ETH into a bonding curve — meaning the price increases as more is minted. This creates a structural incentive to mint early and a continuous fee stream as users buy and sell pETH along the curve. pUSD is an over-collateralised stablecoin minted using pETH as collateral — users deposit pETH to borrow pUSD, paying an interest rate that flows to POLAR holders. POLAR is the governance token, earning real yield from all protocol fees via vote-escrow (lock POLAR to receive vePOLAR, which accumulates a share of all borrower interest and trading fees). The forecast 90d APY for pUSD is 8.5%+ and pETH at 4.03%, comparing favourably against Ethena (4.75%), MakerDAO (4.19%), and Liquity BOLD (6.5%) — with none of USDe's centralised exchange counterparty risk."
+      },
+      {
+        label: "Team credibility: the Liquity connection",
+        body: "The single most credible signal in Polaris's pitch is the Liquity lineage. Liquity is widely considered one of the best-designed DeFi protocols — immutable, governance-minimised, over-collateralised, zero interest rate. Its mechanics are studied by DeFi researchers as a benchmark for honest protocol design. Laurens Kessenich (CTO) was a Liquity developer; Robert Lauko (Liquity founder) is a Polaris advisor. This matters for three reasons: first, it signals genuine protocol design competence, not just copy-paste DeFi. Second, it provides access to Liquity's community and user base for early GTM. Third, it gives Polaris a credibility anchor when approaching DeFi protocols for integration partnerships. The '15+ years of stablecoin development experience' claim across the team is plausible given this lineage."
+      },
+      {
+        label: "GTM and the path to $5B TVL",
+        body: "The GTM plan is staged: Protocol Launch (months 1-6) targeting $300M TVL through vault integrations, lending market partnerships, and DAO/treasury relationships. DeFi Expansion (months 6-18) targeting $1B TVL via L2 expansion and StablecoinOS licensing to other protocols. Institutional Scale (year 2-3) targeting $5B TVL through crypto-native funds and market makers. TradFi (year 3+) targeting $20B+ TVL from asset managers and banks. The early stages are plausible — DeFi protocols integrating yield-bearing stablecoins is a well-established distribution channel (Aave, Curve, Uniswap integrations). The institutional and TradFi stages are speculative and depend heavily on regulatory environment and brand-building that hasn't started yet."
+      },
+      {
+        label: "The Terra/Luna ghost: what Polaris must prove it isn't",
+        body: "Any DeFi protocol with endogenous yield mechanics must answer the Terra/Luna question. UST (Terra's stablecoin) also offered high yields generated from protocol activity, also claimed no counterparty risk, and collapsed entirely in May 2022 in what became the largest DeFi failure in history. The key difference Polaris must prove: Polaris yield comes from real fees paid by real users making real transactions, not from a circular tokenomics system dependent on new money flowing in to sustain yields. The bonding curve model is mathematically cleaner than Anchor Protocol's approach — but the stress test scenarios (30% market crash, liquidity crunch, simultaneous redemption pressure) have not been publicly stress-tested. The 18 months of research and modelling is encouraging; the absence of an audit or public model release is a gap."
+      },
+      {
+        label: "Key diligence questions",
+        body: "1. Can you share the stress test scenarios from the 18 months of modelling, specifically the conditions under which pUSD loses its peg? 2. Who are the specific vault and lending market partners lined up for Protocol Launch — are there LOIs or just conversations? 3. How does the protocol handle a scenario where ETH drops 50% and pETH holders attempt mass redemption simultaneously? 4. What is the audit timeline and which firms are engaged? 5. Is the StablecoinOS licensing model already in discussion with any other protocols, or is it a future hypothesis?"
+      },
+    ],
+    reportVerdict: {
+      value: "High potential",
+      sub: "Genuinely novel yield mechanism, strong Liquity lineage, real competitive APY advantage, and a growing stablecoin market. The risk is almost entirely execution and market confidence. This is a Q4 2026 mainnet story — track through audit completion and first $100M TVL milestone before committing significant capital."
+    },
+    somnia: "Polaris Finance is built as 'The Yield Layer for Ethereum' — explicitly Ethereum-native. However, the StablecoinOS licensing model in their GTM suggests they intend to expand the underlying primitive to other chains. Somnia as an EVM-compatible L1 with high throughput is a realistic expansion target: DeFi protocols need fast liquidation processing (at high TVL, slow liquidations create bad debt), sub-cent transaction fees to make small-position management viable, and EVM compatibility for contract portability. pUSD as a yield-bearing stablecoin on Somnia could provide native DeFi yield infrastructure that the Somnia ecosystem currently lacks.",
+    somniaLabel: "Medium",
+    somniaPoints: [
+      "EVM-compatible: pETH, pUSD and POLAR contracts portable to Somnia without full rewrite",
+      "High TPS enables fast liquidation processing — critical for over-collateralised stablecoin safety at scale",
+      "Sub-cent transactions make small-position pUSD management economically viable for retail users",
+      "StablecoinOS licensing model in GTM plan explicitly envisions multi-chain expansion",
+      "pUSD on Somnia would provide native yield-bearing stablecoin infrastructure the ecosystem needs",
+    ],
+    systemPrompt: `You are a senior venture analyst. Deep dive complete on Polaris Finance — DeFi yield infrastructure for Ethereum.
+
+KEY FACTS: $3M seed via SAFT, Q1 2026 close. Mainnet Q4 2026. Three-asset system: pETH (ETH bonding curve derivative), pUSD (over-collateralised stablecoin), POLAR (governance token, vePOLAR vote-escrow). Yield sources: bonding curve trading fees + pETH-to-POLAR conversion fees + borrower interest rates. Forecast 90d APY: pUSD 8.5%+, pETH 4.03% — better than USDe (4.75%), USDS (4.19%), BOLD (6.5%), with no centralised exchange counterparty risk. Team: Robert Mullins (CEO, 7y crypto, Jumper Exchange), Laurens Kessenich (CTO, PhD Physics ETH Zurich, ex-Liquity developer), TokenBrice (Growth, Liquity/Paraswap). Advisor: Robert Lauko (Liquity founder). GTM: $300M TVL (months 1-6), $1B TVL (months 6-18), $5B TVL (year 2-3) via vaults, lending markets, L2 expansion. CRITICAL RISK: stablecoin graveyard history — must prove it isn't Terra/Luna. No live product, no audits, 18 months of research. Somnia fit: MEDIUM — EVM-compatible, StablecoinOS expansion could include Somnia.
+
+Be direct, reference specific data, challenge assumptions. Always ground the Terra/Luna question when relevant.`
+  },
+
+  texochat: {
+    id: "texochat",
+    name: "Texochat",
+    color: "#10b981",
+    colorDim: "#10b98120",
+    colorBorder: "#10b98140",
+    sector: "Web3 Messaging",
+    stage: "Pre-launch · Seeking seed",
+    valuation: "Undisclosed",
+    score: 31,
+    verdict: "PASS",
+    tagline: "Experience secure and private messaging.",
+    description: "Texochat is building a decentralised messaging platform for crypto users — storing messages on IPFS, enabling in-chat token and NFT transfers, and providing a white-label widget for crypto projects to embed community chat.",
+    simpleExplainer: "Texochat is building a messaging app designed specifically for cryptocurrency users. Unlike regular apps like WhatsApp or Telegram, it lets users send digital assets like tokens and NFTs directly through chat, stores messages on decentralised networks rather than company servers, and rewards users for their activity. It also offers a chat widget that crypto projects can embed on their own websites. Think of it as Telegram rebuilt for crypto holders, where no central company controls your messages or data — but the product and team are at a very early stage, and the deck does not identify who is building it.",
+    metrics: [
+      { label: "Crypto owners (global)", value: "560M" },
+      { label: "Crypto messaging users", value: "10M/month" },
+      { label: "Asia-specific SAM", value: "2M users" },
+      { label: "Token sale", value: "17% allocated" },
+      { label: "Beta", value: "Q1 2026 (testnet)" },
+      { label: "Public sale", value: "Q2 2026" },
+    ],
+    scores: { "Traction": [2,25], "Market": [10,20], "Biz model": [7,20], "Team": [2,15], "Somnia": [7,10], "Upside": [3,10] },
+    highlights: [
+      { icon: "💬", title: "In-chat asset transfers", desc: "Users can send tokens and NFTs directly within conversations — a genuine feature gap vs Telegram. No need to copy-paste wallet addresses or leave the chat." },
+      { icon: "🔒", title: "IPFS message storage", desc: "Messages stored on IPFS and user devices rather than centralised servers. No single point of control or censorship, which matters to crypto communities that have been deplatformed before." },
+      { icon: "🧩", title: "Embeddable widget", desc: "Chat widget for crypto project websites — allows communities to communicate without requiring users to download a separate app. B2B distribution channel that sidesteps cold-start user acquisition." },
+      { icon: "🏦", title: "Multi-chain staking", desc: "Staking integration with LidoFi and in-app reward distribution. Combines communication and yield in one interface, which is relevant to DeFi-native users." },
+    ],
+    risks: [
+      "No identified team: The pitch deck does not name a single team member, founder, or technical lead. This is a fundamental gap — there is no way to assess execution capability.",
+      "Telegram already dominates: Telegram has 900M+ users, deep crypto-native penetration, a bot ecosystem, and has been adding Web3 features (Telegram Wallet, TON integration). The switching cost argument is thin.",
+      "Token sale funding model: The deck allocates 17% to tokensale and positions a Q2 2026 public token sale as a near-term milestone. This suggests the business model relies heavily on token sale proceeds rather than earned revenue.",
+      "No traction or product evidence: No user numbers, no pilot partners, no beta waitlist size, no GitHub, no product screenshots beyond diagrams. The deck is entirely pre-product.",
+      "Thin differentiation: XMTP, Status, Element, and Waku are all building decentralised messaging with far larger teams, more funding, and more technical rigour. The deck does not address why Texochat wins.",
+      "Regulatory risk on in-chat asset transfers: Enabling token transfers within a messaging app creates MSB (money services business) licensing requirements in most jurisdictions — not addressed in the deck.",
+    ],
+    team: [
+      { name: "Unknown", role: "Undisclosed", bg: "No team members named in the pitch deck. The only contact information provided is admin@texochat.com and a Telegram/X handle (@chat_texo). This is a significant red flag for a seed-stage investment evaluation." },
+    ],
+    advisors: [],
+    report: [
+      {
+        label: "What Texochat is (and isn't)",
+        body: "Texochat is positioning itself as a privacy-first, Web3-native messaging platform. The core claim: traditional messaging apps are broken for crypto users because they don't support asset transfers, they store data on centralised servers, and they can censor or ban communities. Texochat proposes: messages on IPFS + user devices (no central storage), in-chat token and NFT transfers, multi-chain staking within the app, and an embeddable widget for crypto project communities. The widget model is the most interesting distribution angle — rather than competing for direct messaging installs against Telegram, it gives crypto projects a tool to embed community chat on their own domains without requiring users to download anything. Whether that's a strong enough wedge to build from is the central question."
+      },
+      {
+        label: "The Telegram problem",
+        body: "Any messaging platform targeting crypto users must answer why it beats Telegram. Telegram has 900M+ monthly active users. The crypto community runs almost entirely on Telegram — project announcements, community management, alpha groups, developer channels. Telegram has added TON blockchain integration, Telegram Wallet, and bot-based mini apps. It has network effects that took a decade to build. The deck does not mention Telegram or explain why crypto communities would move. The features Texochat offers (NFT transfers, IPFS storage, in-chat staking) are meaningful improvements but are features Telegram could add. The only durable differentiation would be true censorship resistance and self-sovereign data — but the deck does not make a rigorous case for why these matter enough to drive switching."
+      },
+      {
+        label: "Business model analysis",
+        body: "Three revenue streams are described: transaction fees on wallet transfers within chat, service fees for paid features like airdrop tools and rewards, and B2B solutions via the chat widget. The transaction fee model has precedent (LINE Pay, WeChat Pay both monetise in-chat payments) but requires meaningful transaction volume first. The B2B widget is the cleaner near-term revenue model — established crypto projects paying for embedded community tools is a believable enterprise sale. The token sale component (17% allocated, Q2 2026 public sale) suggests the business is currently funded or expects to be funded by token proceeds rather than product revenue, which introduces regulatory and market risk."
+      },
+      {
+        label: "Critical gaps",
+        body: "Three issues stand above everything else. First: no named team. A messaging platform requires security expertise, cryptography knowledge, distributed systems engineering, and regulatory awareness. The deck provides zero information about who has these skills. Second: no product evidence. No screenshots of a working product, no GitHub repository, no beta users, no technical whitepaper. The deck is entirely wireframes and feature lists. Third: undifferentiated narrative. The 'Web3 messaging' space has attracted over $500M in venture investment across XMTP (Coinbase ecosystem), Status (Swiss foundation, 10 years of development), Element (Matrix protocol), and others. Texochat does not acknowledge these competitors or explain why their approach is architecturally superior."
+      },
+      {
+        label: "Somnia fit: the only clear positive",
+        body: "A decentralised messaging platform that processes every message as an on-chain transaction requires extremely high throughput and near-zero transaction fees to be viable. At the scale of even a small community (10K users, 100 messages per day each = 1M daily transactions), gas fees on Ethereum mainnet or Base would be prohibitive. Somnia's 1M+ TPS and sub-cent transaction costs are precisely the infrastructure profile that decentralised messaging needs. EVM compatibility would allow the team to deploy smart contracts for token transfers and staking without a full rebuild. This is the strongest Somnia fit argument — but it only matters if the product and team can be substantiated."
+      },
+    ],
+    reportVerdict: {
+      value: "Pass",
+      sub: "Texochat identifies a real problem but offers no evidence of the team, product, or differentiation needed to solve it. The deck is thinner than any other in this group, and the unnamed team is a disqualifying factor for a seed-stage evaluation. Re-evaluate if the team identifies itself and a working product is demonstrated."
+    },
+    somnia: "Decentralised messaging requires exactly the infrastructure profile Somnia provides: high transaction throughput (every message sent is an on-chain event), sub-cent transaction fees (users cannot pay $0.10 per message to chat), and EVM compatibility for token transfer smart contracts. If Texochat builds a functioning product, Somnia would be a natural home for it — the product is fundamentally unviable on high-gas chains and ideally suited to Somnia's architecture. The Somnia fit is high in theory; the execution risk makes it conditional.",
+    somniaLabel: "Medium-High",
+    somniaPoints: [
+      "Every message = one on-chain transaction: sub-cent fees are required for any viable messaging product",
+      "1M+ TPS handles large community chat volumes without latency",
+      "In-chat token and NFT transfers require fast, cheap on-chain settlement",
+      "EVM-compatible deployment means existing Solidity payment contracts are portable",
+    ],
+    systemPrompt: `You are a senior venture analyst. Deep dive complete on Texochat — Web3 decentralised messaging platform.
+
+KEY FACTS: Pre-launch, seeking seed. No named team members in deck — critical red flag. Product: messaging app with IPFS message storage, in-chat token and NFT transfers, embeddable widget for crypto project websites, multi-chain staking with LidoFi integration. Revenue: transaction fees + service fees + B2B widget. Token: 50% platform, 17% team/reserve, 13% tokensale, 14% partner — Q2 2026 public token sale planned. Market: 560M crypto owners globally, 10M active crypto messaging users/month. Timeline: Q1 2026 testnet beta, Q2 2026 public sale. Competition: Telegram (dominates crypto messaging, 900M+ MAU), XMTP, Status, Element — all unaddressed in deck. Somnia fit: HIGH in theory — messaging on blockchain requires high TPS and sub-cent fees. Analyst verdict: Pass — no team, no product, no differentiation case made.
+
+Be direct, honest about gaps. The unnamed team is the primary red flag to address.`
   }
 };
 
@@ -340,23 +619,44 @@ const SUGGESTED = {
   inframarkets: [
     "Walk me through the revenue at $10M monthly volume",
     "How does the IOS oracle work and what are its failure modes?",
-    "How does Lorenzo actually reach commodity traders?",
+    "How does Lorenzo actually reach commodity traders who aren't crypto-native?",
     "Make the bull case vs Tide and Kash",
-    "What's the smart contract audit status?"
+    "What's the smart contract audit status and who is auditing?"
   ],
   tide: [
-    "Why is the liquidity bootstrapping problem so critical?",
-    "How does Tide's platform independence compare to Kash's platform dependency risk?",
-    "What would a credible liquidity plan look like?",
+    "Why is the liquidity bootstrapping problem so critical for scalar markets specifically?",
+    "Explain the CLMSR mechanism — how does the AMM always provide quotes?",
+    "What would a credible Phase 0 liquidity plan look like for Tide?",
     "Make the case for Tide over Inframarkets",
-    "How does Somnia change Tide's economics?"
+    "How does Somnia change Tide's unit economics at retail scale?"
   ],
   kash: [
     "The deck says the team isn't hired yet — who is actually building this right now?",
     "X could shut down your bot tomorrow — what's the contingency plan?",
     "Walk me through how a new partner solves the liquidity cold-start problem in month one",
-    "What happens when the AI oracle resolves a market incorrectly — who has final authority?",
+    "How does zkTLS actually verify market resolution — what can it get wrong?",
     "How does Kash's regulatory exposure compare to Polymarket and Kalshi?"
+  ],
+  "eagle-ai": [
+    "How does speculative decoding actually work — explain like I'm an ML engineer",
+    "What happens to Eagle's moat if the algorithm gets replicated by NVIDIA internally?",
+    "Walk me through the chip payback math at different utilisation rates",
+    "What's the risk to the open-source community relationship as Eagle closes its source?",
+    "How does Eagle AI's Somnia fit compare to the other companies in this portfolio?"
+  ],
+  polaris: [
+    "Explain the pETH bonding curve mechanism and how it generates yield",
+    "How is Polaris different from Terra/Luna — what specifically prevents a death spiral?",
+    "Walk through the stress scenario: ETH drops 50%, what happens to pUSD peg?",
+    "What does the Liquity lineage actually mean — why does it matter who built what?",
+    "What's the path from $300M to $5B TVL — which partners are most critical?"
+  ],
+  texochat: [
+    "Why would any crypto community switch from Telegram to Texochat?",
+    "What would a credible team look like for a product like this?",
+    "How does the B2B widget model compare to Telegram's existing bot ecosystem?",
+    "At what point does this become worth re-evaluating?",
+    "What are the MSB licensing requirements for in-chat token transfers?"
   ]
 };
 
@@ -483,6 +783,12 @@ function VentureDetail({ venture: v, onBack }) {
 
         {section === "overview" && (
           <div style={{ flex: 1, overflowY: "auto", padding: "24px" }}>
+            {v.simpleExplainer && (
+              <div style={{ padding: "16px 20px", background: "#f9fafb", borderRadius: 10, border: "1px solid #e5e7eb", marginBottom: 24 }}>
+                <div style={{ fontSize: 10, fontWeight: 600, color: "#9ca3af", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>What is this?</div>
+                <p style={{ fontSize: 13.5, lineHeight: 1.8, color: "#374151", margin: 0 }}>{v.simpleExplainer}</p>
+              </div>
+            )}
             <div style={{ display: "flex", gap: 24, marginBottom: 28, flexWrap: "wrap" }}>
               <div style={{ flex: 1, minWidth: 280 }}>
                 <div style={{ fontSize: 11, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>{v.sector}</div>
@@ -571,14 +877,18 @@ function VentureDetail({ venture: v, onBack }) {
                 <div style={{ padding: "12px 16px", background: "#f9fafb", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12.5, color: "#4b5563" }}>{v.teamNote}</div>
               )}
             </div>
-            <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 12 }}>Advisors & backers</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              {v.advisors.map((a, i) => (
-                <div key={i} style={{ padding: "10px 14px", background: "#f9fafb", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12.5, color: "#111827", lineHeight: 1.5 }}>
-                  {a}
+            {v.advisors.length > 0 && (
+              <>
+                <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 12 }}>Advisors & backers</h3>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {v.advisors.map((a, i) => (
+                    <div key={i} style={{ padding: "10px 14px", background: "#f9fafb", borderRadius: 8, border: "1px solid #e5e7eb", fontSize: 12.5, color: "#111827", lineHeight: 1.5 }}>
+                      {a}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
             {v.capitalRaised && (
               <>
                 <h3 style={{ fontSize: 11, fontWeight: 500, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em", margin: "24px 0 12px" }}>Capital raised to date</h3>
@@ -687,10 +997,10 @@ export default function App() {
             Venture Intelligence · April 2026
           </div>
           <h1 style={{ fontSize: 30, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.2 }}>
-            Top 3 Ventures — Deep Dive
+            6 Ventures — Deep Dive
           </h1>
           <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.7, maxWidth: 580, margin: 0 }}>
-            Three ventures assessed across traction, market opportunity, business model, team strength and risk-adjusted upside. Click any card to read the full analyst report and chat with a dedicated research agent.
+            Six ventures assessed across traction, market opportunity, business model, team strength, Somnia network fit and risk-adjusted upside. Click any card to read the full analyst report and chat with a dedicated research agent.
           </p>
         </div>
 
