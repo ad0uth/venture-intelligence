@@ -875,8 +875,8 @@ function VentureDetail({ venture: v, onBack }) {
           <span style={{ fontWeight: 500, fontSize: 14 }}>{v.name}</span>
           <span style={{ fontSize: 11, color: "#6b7280" }}>· {v.sector}</span>
         </div>
-        <div style={{ marginLeft: "auto", padding: "4px 12px", borderRadius: 20, fontSize: 11, fontWeight: 500, background: v.colorDim, color: v.color, border: `1px solid ${v.colorBorder}` }}>
-          {v.verdict}
+        <div style={{ marginLeft: "auto", padding: "4px 12px", borderRadius: 20, fontSize: 11, fontWeight: 600, background: v.colorDim, color: v.color, border: `1px solid ${v.colorBorder}` }}>
+          {v.score}/100
         </div>
       </div>
 
@@ -968,8 +968,7 @@ function VentureDetail({ venture: v, onBack }) {
               </div>
             ))}
             <div style={{ padding: "20px 22px", border: `1px solid ${v.colorBorder}`, borderRadius: 12, background: v.colorDim, marginTop: 8 }}>
-              <div style={{ fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: v.color, marginBottom: 6 }}>Analyst verdict</div>
-              <div style={{ fontSize: 22, fontWeight: 700, color: v.color, marginBottom: 6 }}>{v.reportVerdict.value}</div>
+              <div style={{ fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: v.color, marginBottom: 8 }}>Analyst summary</div>
               <div style={{ fontSize: 12.5, color: "#4b5563", lineHeight: 1.65 }}>{v.reportVerdict.sub}</div>
             </div>
           </div>
@@ -1034,9 +1033,9 @@ function VentureDetail({ venture: v, onBack }) {
               ))}
             </div>
             <div style={{ padding: "20px 22px", border: `1px solid ${v.colorBorder}`, borderRadius: 12, background: v.colorDim }}>
-              <div style={{ fontSize: 11, fontWeight: 500, color: v.color, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>Analyst verdict</div>
-              <div style={{ fontSize: 22, fontWeight: 600, color: v.color, marginBottom: 4 }}>{v.verdict}</div>
-              <div style={{ fontSize: 12.5, color: "#4b5563", lineHeight: 1.6 }}>Score: {v.score}/100 · {v.sector}</div>
+              <div style={{ fontSize: 11, fontWeight: 500, color: v.color, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6 }}>Overall score</div>
+              <div style={{ fontSize: 22, fontWeight: 700, color: v.color, marginBottom: 4 }}>{v.score}<span style={{ fontSize: 13, fontWeight: 400, color: "#9ca3af" }}>/100</span></div>
+              <div style={{ fontSize: 12.5, color: "#4b5563", lineHeight: 1.6 }}>{v.sector}</div>
             </div>
           </div>
         )}
@@ -1090,10 +1089,7 @@ function VentureCard({ venture: v, onClick }) {
         <ScoreRing score={v.score} color={v.color} size={64}/>
       </div>
       <p style={{ fontSize: 12.5, color: "#6b7280", lineHeight: 1.6, margin: "0 0 16px" }}>{v.description}</p>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ padding: "4px 12px", borderRadius: 20, fontSize: 11, fontWeight: 500, background: v.colorDim, color: v.color, border: `1px solid ${v.colorBorder}` }}>
-          {v.verdict}
-        </div>
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <span style={{ fontSize: 12, color: v.color, fontWeight: 500 }}>Deep dive →</span>
       </div>
     </div>
