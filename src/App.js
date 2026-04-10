@@ -11,7 +11,7 @@ const VENTURES = {
     stage: "Seed · $3M raise",
     valuation: "$15M post-money",
     score: 72,
-    verdict: "STRONG INVEST",
+    verdict: "WATCH CLOSELY",
     tagline: "The missing financial primitive for the AI & energy supercycle.",
     description: "Institutional-grade event contracts on energy assets — bringing prediction market mechanics to a $1T+ annual energy futures market that current platforms can't touch.",
     simpleExplainer: "Inframarkets is a trading platform for energy prices. Instead of buying expensive futures contracts like large banks do, anyone in the world can bet on whether European gas or oil prices will go up or down in the next five minutes, with no minimum bet size and no broker required. The platform settles bets automatically using real price data from official energy exchanges, so there is no human deciding who wins. It sits at the intersection of two trends: the explosion of betting markets online, and the surging volatility in energy prices driven by AI data centers and the shift to renewables.",
@@ -80,7 +80,7 @@ const VENTURES = {
       },
     ],
     reportVerdict: {
-      value: "Strong invest case",
+      value: "Top pick — watch closely",
       sub: "Most rigorous pitch in the portfolio. Real problem, technically credible solution, clean revenue model, actual liquidity plan, best sector-credentialed advisory team. The risk/reward is compelling at $3M seed / $15M post. Gate: audit status, data provider agreements, evidence of institutional demand conversations."
     },
     somnia: "Cross-chain compatibility is already on Inframarkets' post-launch roadmap, suggesting they're chain-agnostic by design. High-frequency energy contract settlement — intraday TTF gas contracts update every 5 minutes, generating constant on-chain position tracking, margin calls and settlement events. Somnia's EVM-compatible architecture means an Inframarkets deployment wouldn't require a full rewrite of oracle or settlement logic. Slightly lower fit than Tide because institutional traders are less sensitive to gas costs than retail consumers — but a meaningful integration opportunity, particularly as Inframarkets expands to retail participation.",
