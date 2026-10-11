@@ -1069,7 +1069,8 @@ function VentureDetail({ venture: v, onBack }) {
 function VentureCard({ venture: v, onClick }) {
   const [hovered, setHovered] = useState(false);
   return (
-    <div
+    <button
+      type="button"
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -1077,6 +1078,11 @@ function VentureCard({ venture: v, onClick }) {
         border: `1px solid ${hovered ? v.color : v.colorBorder}`,
         borderRadius: 12, padding: "22px 24px", cursor: "pointer",
         background: hovered ? v.colorDim : "#fff",
+        display: "block",
+        width: "100%",
+        textAlign: "left",
+        font: "inherit",
+        appearance: "none",
         transition: "all 0.2s",
         transform: hovered ? "translateY(-2px)" : "translateY(0)",
         boxShadow: hovered ? `0 8px 24px ${v.colorDim}` : "0 1px 4px rgba(0,0,0,0.04)"
@@ -1092,7 +1098,7 @@ function VentureCard({ venture: v, onClick }) {
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <span style={{ fontSize: 12, color: v.color, fontWeight: 500 }}>Deep dive →</span>
       </div>
-    </div>
+    </button>
   );
 }
 
